@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3631E0D6DDBC26D7F523F74B /* Pods_Utilities_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73865062C7987936BFB03C1D /* Pods_Utilities_iOS.framework */; };
+		CE01C98323019FD700C87440 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01C98223019FD700C87440 /* Request.swift */; };
+		CE01C9872301A10A00C87440 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01C9862301A10A00C87440 /* General.swift */; };
 		CE35BBFA22FF07DA00DC1434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35BBF922FF07DA00DC1434 /* AppDelegate.swift */; };
 		CE35BBFC22FF07DA00DC1434 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35BBFB22FF07DA00DC1434 /* ViewController.swift */; };
 		CE35BBFF22FF07DA00DC1434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE35BBFD22FF07DA00DC1434 /* Main.storyboard */; };
@@ -69,12 +71,19 @@
 		CE35BC9422FF14EB00DC1434 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35BC5F22FF14EA00DC1434 /* Button.swift */; };
 		CE35BC9622FF1E5B00DC1434 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35BC9522FF1E5B00DC1434 /* Alert.swift */; };
 		CE5226FC22FF372D007F5A9D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5226FB22FF372D007F5A9D /* Image.swift */; };
+		CEDF5C002301C242007426D2 /* SwiftLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */; };
+		CEDF5C062301CF63007426D2 /* MotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C052301CF63007426D2 /* MotionKit.swift */; };
+		CEDF5C082301D19D007426D2 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C072301D19D007426D2 /* Device.swift */; };
+		CEDF5C0C2301D4F0007426D2 /* SwiftGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C0B2301D4F0007426D2 /* SwiftGif.swift */; };
+		CEDF5C122301E273007426D2 /* AZDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C112301E273007426D2 /* AZDialogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1EBD14DC1D7DD13A87D28C84 /* Pods-Utilities-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utilities-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Utilities-iOS/Pods-Utilities-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		73865062C7987936BFB03C1D /* Pods_Utilities_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Utilities_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9658D9A068CBE1411F4E33C9 /* Pods-Utilities-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utilities-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Utilities-iOS/Pods-Utilities-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		CE01C98223019FD700C87440 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		CE01C9862301A10A00C87440 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		CE35BBF622FF07DA00DC1434 /* Utilities-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Utilities-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE35BBF922FF07DA00DC1434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE35BBFB22FF07DA00DC1434 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +147,11 @@
 		CE35BC5F22FF14EA00DC1434 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		CE35BC9522FF1E5B00DC1434 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CE5226FB22FF372D007F5A9D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLocation.swift; sourceTree = "<group>"; };
+		CEDF5C052301CF63007426D2 /* MotionKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionKit.swift; sourceTree = "<group>"; };
+		CEDF5C072301D19D007426D2 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		CEDF5C0B2301D4F0007426D2 /* SwiftGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGif.swift; sourceTree = "<group>"; };
+		CEDF5C112301E273007426D2 /* AZDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZDialogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +181,41 @@
 				1EBD14DC1D7DD13A87D28C84 /* Pods-Utilities-iOS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE01C98123019FC400C87440 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				CE01C98223019FD700C87440 /* Request.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		CE01C9842301A0E600C87440 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				CE35BC0D22FF08F400DC1434 /* String.swift */,
+				CE5226FB22FF372D007F5A9D /* Image.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		CE01C9852301A0F600C87440 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE01C9862301A10A00C87440 /* General.swift */,
+				CEDF5C072301D19D007426D2 /* Device.swift */,
+				CEDF5C0B2301D4F0007426D2 /* SwiftGif.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE01C9882301BE4C00C87440 /* SwiftLocation */ = {
+			isa = PBXGroup;
+			children = (
+				CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */,
+			);
+			path = SwiftLocation;
 			sourceTree = "<group>";
 		};
 		CE35BBED22FF07DA00DC1434 = {
@@ -205,6 +254,9 @@
 		CE35BC0B22FF08CE00DC1434 /* 3rdPartyLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				CE01C9882301BE4C00C87440 /* SwiftLocation */,
+				CE01C98123019FC400C87440 /* Alamofire */,
+				CEDF5C052301CF63007426D2 /* MotionKit.swift */,
 			);
 			path = 3rdPartyLibrary;
 			sourceTree = "<group>";
@@ -212,10 +264,10 @@
 		CE35BC0C22FF08DD00DC1434 /* StandardLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				CE01C9852301A0F600C87440 /* Utils */,
+				CE01C9842301A0E600C87440 /* Extentions */,
 				CE35BC0F22FF14EA00DC1434 /* alertsAndPickers */,
-				CE35BC0D22FF08F400DC1434 /* String.swift */,
-				CE35BC9522FF1E5B00DC1434 /* Alert.swift */,
-				CE5226FB22FF372D007F5A9D /* Image.swift */,
+				CEDF5C112301E273007426D2 /* AZDialogViewController.swift */,
 			);
 			path = StandardLibrary;
 			sourceTree = "<group>";
@@ -223,6 +275,7 @@
 		CE35BC0F22FF14EA00DC1434 /* alertsAndPickers */ = {
 			isa = PBXGroup;
 			children = (
+				CE35BC9522FF1E5B00DC1434 /* Alert.swift */,
 				CE35BC1022FF14EA00DC1434 /* Extensions */,
 				CE35BC2222FF14EA00DC1434 /* Viewers */,
 				CE35BC2622FF14EA00DC1434 /* Pickers */,
@@ -592,10 +645,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Utilities-iOS/Pods-Utilities-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftOCR/SwiftOCR.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftOCR.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -609,6 +672,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE01C9872301A10A00C87440 /* General.swift in Sources */,
 				CE35BC6722FF14EB00DC1434 /* UITextView+Extensions.swift in Sources */,
 				CE35BC6622FF14EB00DC1434 /* String+Extensions.swift in Sources */,
 				CE35BC8422FF14EB00DC1434 /* ContactsPickerViewController.swift in Sources */,
@@ -619,6 +683,8 @@
 				CE35BC8C22FF14EB00DC1434 /* PhotoLayout.swift in Sources */,
 				CE35BC6222FF14EB00DC1434 /* UIImageView+Extensions.swift in Sources */,
 				CE35BC6A22FF14EB00DC1434 /* UISearchBar+Extensions.swift in Sources */,
+				CEDF5C0C2301D4F0007426D2 /* SwiftGif.swift in Sources */,
+				CEDF5C082301D19D007426D2 /* Device.swift in Sources */,
 				CE35BC7722FF14EB00DC1434 /* PhoneCodeCell.swift in Sources */,
 				CE35BC9422FF14EB00DC1434 /* Button.swift in Sources */,
 				CE35BC7822FF14EB00DC1434 /* CurrencyCell.swift in Sources */,
@@ -630,6 +696,7 @@
 				CE35BC9322FF14EB00DC1434 /* TextField.swift in Sources */,
 				CE35BC8622FF14EB00DC1434 /* Contact.swift in Sources */,
 				CE35BC8722FF14EB00DC1434 /* ContactCell.swift in Sources */,
+				CEDF5C002301C242007426D2 /* SwiftLocation.swift in Sources */,
 				CE35BBFC22FF07DA00DC1434 /* ViewController.swift in Sources */,
 				CE35BC6322FF14EB00DC1434 /* UIViewController+Extensions.swift in Sources */,
 				CE35BC6F22FF14EB00DC1434 /* Locale+Extensions.swift in Sources */,
@@ -644,6 +711,7 @@
 				CE35BC8222FF14EB00DC1434 /* Address.swift in Sources */,
 				CE35BC7E22FF14EB00DC1434 /* LocationSearchResultsViewController.swift in Sources */,
 				CE35BC6C22FF14EB00DC1434 /* UIAlertController+Extensions.swift in Sources */,
+				CE01C98323019FD700C87440 /* Request.swift in Sources */,
 				CE35BC8522FF14EB00DC1434 /* Contacts.swift in Sources */,
 				CE35BC8122FF14EB00DC1434 /* Location.swift in Sources */,
 				CE35BC7022FF14EB00DC1434 /* UITextField+Extensions.swift in Sources */,
@@ -655,12 +723,14 @@
 				CE35BC6922FF14EB00DC1434 /* UIImage+Extensions.swift in Sources */,
 				CE35BC8A22FF14EB00DC1434 /* ImagePickerViewController.swift in Sources */,
 				CE35BC6022FF14EB00DC1434 /* Array+Extensions.swift in Sources */,
+				CEDF5C122301E273007426D2 /* AZDialogViewController.swift in Sources */,
 				CE35BC8F22FF14EB00DC1434 /* LikeButtonCell.swift in Sources */,
 				CE35BC8D22FF14EB00DC1434 /* TelegramPickerViewController.swift in Sources */,
 				CE35BC6522FF14EB00DC1434 /* Date+Extension.swift in Sources */,
 				CE35BC7C22FF14EB00DC1434 /* Assets.swift in Sources */,
 				CE35BC7D22FF14EB00DC1434 /* PhotoLibraryPickerViewController.swift in Sources */,
 				CE35BC9222FF14EB00DC1434 /* GradientSlider.swift in Sources */,
+				CEDF5C062301CF63007426D2 /* MotionKit.swift in Sources */,
 				CE35BC8822FF14EB00DC1434 /* ColorPickerViewController.swift in Sources */,
 				CE35BC8B22FF14EB00DC1434 /* ItemWithImage.swift in Sources */,
 				CE35BC8322FF14EB00DC1434 /* PickerViewViewController.swift in Sources */,
@@ -748,6 +818,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -802,6 +873,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};

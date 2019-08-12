@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftOCR
 
 class ViewController: UIViewController {
     
@@ -14,13 +15,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        alertLocation { l in
-            print(l.coordinate.latitude)
-            print(l.coordinate.longitude)
-        }
     }
-    
 
 
 }

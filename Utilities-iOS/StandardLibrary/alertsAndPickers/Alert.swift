@@ -4,6 +4,12 @@
 import UIKit
 import CoreLocation
 
+func alertNormal(title: String = "Title", message: String = "Message", buttonTitle: String = "OK", action: @escaping () -> Void?) {
+    let alert = UIAlertController(style: .alert, title: title, message: message)
+    alert.addAction(title: buttonTitle, color: .blue, style: .default) { a in action() }
+
+    alert.show(animated: true, vibrate: false)
+}
 
 func alertTextField(title: String = "", textColor: UIColor = .black, buttonText: String = "", placeHolder: String = "", action: @escaping (String) -> Void) {
     let alert = UIAlertController(style: .alert, title: title)
@@ -44,8 +50,6 @@ func alertPicker(title: String = "Title", message: String = "", buttonText: Stri
     alert.show()
 }
 
-///
-///
 func alertCountry(buttonTitle: String = "OK", localeInfo: @escaping (LocaleInfo) -> Void) {
     let alert = UIAlertController(style: .actionSheet, message: "Select Country")
     alert.addLocalePicker(type: .country) { info in localeInfo(info!) }
@@ -93,8 +97,7 @@ private let text: [AttributedTextBlock] = [
     .header1("U.S. Returns & Refunds Policy."),
     .header2("Standard Return Policy."),
     .normal("There are a few important things to keep in mind when returning a product you purchased online from Apple:"),
-    .list("You have 14 calendar days to return an item from the date you received it."),
-    .list("Opened software")]
+    .list("You have 14 calendar days to return an item from the date you received it.")]
 
 
 func alertLocation(buttonText: String = "OK", loc: @escaping (Location) -> Void) {
