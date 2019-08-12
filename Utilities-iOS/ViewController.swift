@@ -9,11 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private var text = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+        alertLocation { l in
+            print(l.coordinate.latitude)
+            print(l.coordinate.longitude)
+        }
     }
+    
 
 
 }
