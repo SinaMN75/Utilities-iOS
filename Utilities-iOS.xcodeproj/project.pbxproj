@@ -76,6 +76,8 @@
 		CEAA5241233E2E2100551546 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = CEAA523F233E2E2100551546 /* pause.png */; };
 		CEAA5243233E38E000551546 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA5242233E38E000551546 /* Media.swift */; };
 		CEAA5245233E4D3000551546 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA5244233E4D3000551546 /* Number.swift */; };
+		CEAA5247233E5FC900551546 /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA5246233E5FC900551546 /* Subtitle.swift */; };
+		CEAA5249233E625400551546 /* toyStory.srt in Resources */ = {isa = PBXBuildFile; fileRef = CEAA5248233E625400551546 /* toyStory.srt */; };
 		CED52F5D233A1C3300B5E6D6 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED52F5C233A1C3300B5E6D6 /* Navigation.swift */; };
 		CEDF5C002301C242007426D2 /* SwiftLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */; };
 		CEDF5C082301D19D007426D2 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C072301D19D007426D2 /* Device.swift */; };
@@ -158,6 +160,8 @@
 		CEAA523F233E2E2100551546 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		CEAA5242233E38E000551546 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		CEAA5244233E4D3000551546 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		CEAA5246233E5FC900551546 /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
+		CEAA5248233E625400551546 /* toyStory.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = toyStory.srt; sourceTree = "<group>"; };
 		CED52F5C233A1C3300B5E6D6 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLocation.swift; sourceTree = "<group>"; };
 		CEDF5C072301D19D007426D2 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -554,6 +558,7 @@
 				CEFDBA87233D417A0077E480 /* AudioPlayerViewController.swift */,
 				CEFDBA89233D42780077E480 /* AVPlayer.storyboard */,
 				CE650636233E01E800D843C5 /* VideoPlayerViewController.swift */,
+				CEAA5246233E5FC900551546 /* Subtitle.swift */,
 			);
 			path = AVPlayer;
 			sourceTree = "<group>";
@@ -561,6 +566,7 @@
 		CEAA523C233E2E0A00551546 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CEAA5248233E625400551546 /* toyStory.srt */,
 				CEAA523D233E2E1400551546 /* images */,
 			);
 			path = src;
@@ -635,6 +641,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAA5249233E625400551546 /* toyStory.srt in Resources */,
 				CEFDBA8A233D42780077E480 /* AVPlayer.storyboard in Resources */,
 				CE35BC7322FF14EB00DC1434 /* Countries.bundle in Resources */,
 				CE35BC0422FF07DC00DC1434 /* LaunchScreen.storyboard in Resources */,
@@ -738,6 +745,7 @@
 				CE01C98323019FD700C87440 /* Request.swift in Sources */,
 				CE35BC8522FF14EB00DC1434 /* Contacts.swift in Sources */,
 				CE35BC8122FF14EB00DC1434 /* Location.swift in Sources */,
+				CEAA5247233E5FC900551546 /* Subtitle.swift in Sources */,
 				CEAA5243233E38E000551546 /* Media.swift in Sources */,
 				CE35BC7022FF14EB00DC1434 /* UITextField+Extensions.swift in Sources */,
 				CE35BBFA22FF07DA00DC1434 /* AppDelegate.swift in Sources */,

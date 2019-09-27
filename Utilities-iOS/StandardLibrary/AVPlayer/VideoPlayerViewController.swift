@@ -13,6 +13,7 @@ class VideoPlayerViewController: UIViewController {
     @IBOutlet weak var labelCurrentTime: UILabel!
     @IBOutlet weak var labelDuration: UILabel!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var labelSubtitle: UILabel!
     
     private let url = URL(string: "https://www.digikala.com/mag/wp-content/uploads/2019/09/Call-of-Duty-Modern-Warfare-Story-Trailer.mp4")
     private var player: AVPlayer!
@@ -49,6 +50,12 @@ class VideoPlayerViewController: UIViewController {
             let seconds = CMTimeGetSeconds(cmTime)
             self.labelCurrentTime.text = "\(Int(seconds).asMinute()):\(Int(seconds).asSecond())"
             self.slider.value = Float(seconds / CMTimeGetSeconds(self.duration))
+            
+            let subtitleFile = Bundle.main.path(forResource: "toyStory", ofType: "srt")
+            let subtitleURL = URL(fileURLWithPath: subtitleFile!)
+            let parser = Subtitles(file: subtitleURL, encoding: .utf8)
+            let subtitles = parser.searchSubtitles(at: seconds)
+            self.labelSubtitle.text = subtitles
         }
     }
     
