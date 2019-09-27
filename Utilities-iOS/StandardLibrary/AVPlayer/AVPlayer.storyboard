@@ -186,6 +186,14 @@
             </objects>
             <point key="canvasLocation" x="734.78260869565224" y="-9.375"/>
         </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="xHQ-Xx-gJO">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="fPc-F4-WCn" customClass="AVKitViewController" customModule="Utilities_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aud-EM-l7B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1590" y="-9"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backward.fill" catalog="system" width="64" height="38"/>

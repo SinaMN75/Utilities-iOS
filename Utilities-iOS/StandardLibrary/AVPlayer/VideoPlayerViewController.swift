@@ -20,6 +20,9 @@ class VideoPlayerViewController: UIViewController {
     private var currentTimeInSecond = 0
     private var durationInSecond = 0
     private var duration: CMTime!
+    private var isSeeking = false
+    
+    let parser = Subtitles(file: URL(fileURLWithPath: Bundle.main.path(forResource: "toyStory", ofType: "srt")!), encoding: .utf8)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,16 +49,15 @@ class VideoPlayerViewController: UIViewController {
     }
     
     private func setupProgress() {
-        player.addPeriodicTimeObserver(forInterval: CMTime(value: 1, timescale: 2), queue: .main) { cmTime in
-            let seconds = CMTimeGetSeconds(cmTime)
-            self.labelCurrentTime.text = "\(Int(seconds).asMinute()):\(Int(seconds).asSecond())"
-            self.slider.value = Float(seconds / CMTimeGetSeconds(self.duration))
-            
-            let subtitleFile = Bundle.main.path(forResource: "toyStory", ofType: "srt")
-            let subtitleURL = URL(fileURLWithPath: subtitleFile!)
-            let parser = Subtitles(file: subtitleURL, encoding: .utf8)
-            let subtitles = parser.searchSubtitles(at: seconds)
-            self.labelSubtitle.text = subtitles
+        player.addPeriodicTimeObserver(forInterval: CMTime(value: 5, timescale: 5), queue: .main) { cmTime in
+            if !self.isSeeking  {
+                let seconds = CMTimeGetSeconds(cmTime)
+                self.currentTimeInSecond = Int(seconds)
+                self.labelCurrentTime.text = "\(Int(seconds).asMinute()):\(Int(seconds).asSecond())"
+                self.slider.value = Float(seconds / CMTimeGetSeconds(self.duration))
+                
+                self.labelSubtitle.text = self.parser.searchSubtitles(at: seconds)
+            }
         }
     }
     
@@ -77,10 +79,19 @@ class VideoPlayerViewController: UIViewController {
     }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
+        self.isSeeking = true
+        player.pause()
         let seconds = CMTimeGetSeconds(duration)
         let value = Float64(slider.value) * seconds
         let seekTime = CMTime(value: Int64(value), timescale: 1)
-        player.seek(to: seekTime) { b in }
+        player.seek(to: seekTime) { b in
+            self.isSeeking = false
+            self.activityIndicator.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            self.player.play()
+                self.activityIndicator.isHidden = true
+            }
+        }
     }
     
     private func setupGradientLayer() {

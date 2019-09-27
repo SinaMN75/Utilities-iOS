@@ -71,6 +71,7 @@
 		CE35BC9422FF14EB00DC1434 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35BC5F22FF14EA00DC1434 /* Button.swift */; };
 		CE35BC9622FF1E5B00DC1434 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35BC9522FF1E5B00DC1434 /* Alert.swift */; };
 		CE5226FC22FF372D007F5A9D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5226FB22FF372D007F5A9D /* Image.swift */; };
+		CE62AF38233E82C000F71489 /* AVKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62AF37233E82C000F71489 /* AVKitViewController.swift */; };
 		CE650637233E01E800D843C5 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE650636233E01E800D843C5 /* VideoPlayerViewController.swift */; };
 		CEAA5240233E2E2100551546 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = CEAA523E233E2E2000551546 /* play.png */; };
 		CEAA5241233E2E2100551546 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = CEAA523F233E2E2100551546 /* pause.png */; };
@@ -155,6 +156,7 @@
 		CE35BC5F22FF14EA00DC1434 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		CE35BC9522FF1E5B00DC1434 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CE5226FB22FF372D007F5A9D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		CE62AF37233E82C000F71489 /* AVKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVKitViewController.swift; sourceTree = "<group>"; };
 		CE650636233E01E800D843C5 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		CEAA523E233E2E2000551546 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		CEAA523F233E2E2100551546 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
@@ -559,6 +561,7 @@
 				CEFDBA89233D42780077E480 /* AVPlayer.storyboard */,
 				CE650636233E01E800D843C5 /* VideoPlayerViewController.swift */,
 				CEAA5246233E5FC900551546 /* Subtitle.swift */,
+				CE62AF37233E82C000F71489 /* AVKitViewController.swift */,
 			);
 			path = AVPlayer;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				CE35BC6722FF14EB00DC1434 /* UITextView+Extensions.swift in Sources */,
 				CE650637233E01E800D843C5 /* VideoPlayerViewController.swift in Sources */,
 				CE35BC6622FF14EB00DC1434 /* String+Extensions.swift in Sources */,
+				CE62AF38233E82C000F71489 /* AVKitViewController.swift in Sources */,
 				CE35BC8422FF14EB00DC1434 /* ContactsPickerViewController.swift in Sources */,
 				CE35BC7122FF14EB00DC1434 /* AttributedTextBlock.swift in Sources */,
 				CE35BC8922FF14EB00DC1434 /* DatePickerViewController.swift in Sources */,
