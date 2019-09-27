@@ -26,3 +26,5 @@ func isConnectedToNetwork() -> Bool {
     
     return ret
 }
+
+

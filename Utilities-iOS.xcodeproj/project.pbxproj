@@ -71,11 +71,13 @@
 		CE35BC9422FF14EB00DC1434 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35BC5F22FF14EA00DC1434 /* Button.swift */; };
 		CE35BC9622FF1E5B00DC1434 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35BC9522FF1E5B00DC1434 /* Alert.swift */; };
 		CE5226FC22FF372D007F5A9D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5226FB22FF372D007F5A9D /* Image.swift */; };
+		CE650637233E01E800D843C5 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE650636233E01E800D843C5 /* VideoPlayerViewController.swift */; };
+		CED52F5D233A1C3300B5E6D6 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED52F5C233A1C3300B5E6D6 /* Navigation.swift */; };
 		CEDF5C002301C242007426D2 /* SwiftLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */; };
-		CEDF5C062301CF63007426D2 /* MotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C052301CF63007426D2 /* MotionKit.swift */; };
 		CEDF5C082301D19D007426D2 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C072301D19D007426D2 /* Device.swift */; };
 		CEDF5C0C2301D4F0007426D2 /* SwiftGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C0B2301D4F0007426D2 /* SwiftGif.swift */; };
-		CEDF5C122301E273007426D2 /* AZDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C112301E273007426D2 /* AZDialogViewController.swift */; };
+		CEFDBA88233D417A0077E480 /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDBA87233D417A0077E480 /* AudioPlayerViewController.swift */; };
+		CEFDBA8A233D42780077E480 /* AVPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFDBA89233D42780077E480 /* AVPlayer.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,11 +149,13 @@
 		CE35BC5F22FF14EA00DC1434 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		CE35BC9522FF1E5B00DC1434 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CE5226FB22FF372D007F5A9D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		CE650636233E01E800D843C5 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		CED52F5C233A1C3300B5E6D6 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLocation.swift; sourceTree = "<group>"; };
-		CEDF5C052301CF63007426D2 /* MotionKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionKit.swift; sourceTree = "<group>"; };
 		CEDF5C072301D19D007426D2 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		CEDF5C0B2301D4F0007426D2 /* SwiftGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGif.swift; sourceTree = "<group>"; };
-		CEDF5C112301E273007426D2 /* AZDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZDialogViewController.swift; sourceTree = "<group>"; };
+		CEFDBA87233D417A0077E480 /* AudioPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewController.swift; sourceTree = "<group>"; };
+		CEFDBA89233D42780077E480 /* AVPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AVPlayer.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,19 +187,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CE01C98123019FC400C87440 /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				CE01C98223019FD700C87440 /* Request.swift */,
-			);
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
 		CE01C9842301A0E600C87440 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
 				CE35BC0D22FF08F400DC1434 /* String.swift */,
 				CE5226FB22FF372D007F5A9D /* Image.swift */,
+				CED52F5C233A1C3300B5E6D6 /* Navigation.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -208,14 +205,6 @@
 				CEDF5C0B2301D4F0007426D2 /* SwiftGif.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		CE01C9882301BE4C00C87440 /* SwiftLocation */ = {
-			isa = PBXGroup;
-			children = (
-				CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */,
-			);
-			path = SwiftLocation;
 			sourceTree = "<group>";
 		};
 		CE35BBED22FF07DA00DC1434 = {
@@ -254,9 +243,8 @@
 		CE35BC0B22FF08CE00DC1434 /* 3rdPartyLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				CE01C9882301BE4C00C87440 /* SwiftLocation */,
-				CE01C98123019FC400C87440 /* Alamofire */,
-				CEDF5C052301CF63007426D2 /* MotionKit.swift */,
+				CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */,
+				CE01C98223019FD700C87440 /* Request.swift */,
 			);
 			path = 3rdPartyLibrary;
 			sourceTree = "<group>";
@@ -264,10 +252,10 @@
 		CE35BC0C22FF08DD00DC1434 /* StandardLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				CE650635233DF9D500D843C5 /* AVPlayer */,
 				CE01C9852301A0F600C87440 /* Utils */,
 				CE01C9842301A0E600C87440 /* Extentions */,
 				CE35BC0F22FF14EA00DC1434 /* alertsAndPickers */,
-				CEDF5C112301E273007426D2 /* AZDialogViewController.swift */,
 			);
 			path = StandardLibrary;
 			sourceTree = "<group>";
@@ -549,6 +537,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CE650635233DF9D500D843C5 /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CEFDBA87233D417A0077E480 /* AudioPlayerViewController.swift */,
+				CEFDBA89233D42780077E480 /* AVPlayer.storyboard */,
+				CE650636233E01E800D843C5 /* VideoPlayerViewController.swift */,
+			);
+			path = AVPlayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -609,6 +607,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFDBA8A233D42780077E480 /* AVPlayer.storyboard in Resources */,
 				CE35BC7322FF14EB00DC1434 /* Countries.bundle in Resources */,
 				CE35BC0422FF07DC00DC1434 /* LaunchScreen.storyboard in Resources */,
 				CE35BC0122FF07DC00DC1434 /* Assets.xcassets in Resources */,
@@ -645,20 +644,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Utilities-iOS/Pods-Utilities-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
-				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftOCR/SwiftOCR.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftOCR.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -674,6 +665,7 @@
 			files = (
 				CE01C9872301A10A00C87440 /* General.swift in Sources */,
 				CE35BC6722FF14EB00DC1434 /* UITextView+Extensions.swift in Sources */,
+				CE650637233E01E800D843C5 /* VideoPlayerViewController.swift in Sources */,
 				CE35BC6622FF14EB00DC1434 /* String+Extensions.swift in Sources */,
 				CE35BC8422FF14EB00DC1434 /* ContactsPickerViewController.swift in Sources */,
 				CE35BC7122FF14EB00DC1434 /* AttributedTextBlock.swift in Sources */,
@@ -696,6 +688,7 @@
 				CE35BC9322FF14EB00DC1434 /* TextField.swift in Sources */,
 				CE35BC8622FF14EB00DC1434 /* Contact.swift in Sources */,
 				CE35BC8722FF14EB00DC1434 /* ContactCell.swift in Sources */,
+				CEFDBA88233D417A0077E480 /* AudioPlayerViewController.swift in Sources */,
 				CEDF5C002301C242007426D2 /* SwiftLocation.swift in Sources */,
 				CE35BBFC22FF07DA00DC1434 /* ViewController.swift in Sources */,
 				CE35BC6322FF14EB00DC1434 /* UIViewController+Extensions.swift in Sources */,
@@ -723,14 +716,13 @@
 				CE35BC6922FF14EB00DC1434 /* UIImage+Extensions.swift in Sources */,
 				CE35BC8A22FF14EB00DC1434 /* ImagePickerViewController.swift in Sources */,
 				CE35BC6022FF14EB00DC1434 /* Array+Extensions.swift in Sources */,
-				CEDF5C122301E273007426D2 /* AZDialogViewController.swift in Sources */,
+				CED52F5D233A1C3300B5E6D6 /* Navigation.swift in Sources */,
 				CE35BC8F22FF14EB00DC1434 /* LikeButtonCell.swift in Sources */,
 				CE35BC8D22FF14EB00DC1434 /* TelegramPickerViewController.swift in Sources */,
 				CE35BC6522FF14EB00DC1434 /* Date+Extension.swift in Sources */,
 				CE35BC7C22FF14EB00DC1434 /* Assets.swift in Sources */,
 				CE35BC7D22FF14EB00DC1434 /* PhotoLibraryPickerViewController.swift in Sources */,
 				CE35BC9222FF14EB00DC1434 /* GradientSlider.swift in Sources */,
-				CEDF5C062301CF63007426D2 /* MotionKit.swift in Sources */,
 				CE35BC8822FF14EB00DC1434 /* ColorPickerViewController.swift in Sources */,
 				CE35BC8B22FF14EB00DC1434 /* ItemWithImage.swift in Sources */,
 				CE35BC8322FF14EB00DC1434 /* PickerViewViewController.swift in Sources */,

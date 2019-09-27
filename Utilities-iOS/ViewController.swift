@@ -7,16 +7,11 @@
 //
 
 import UIKit
-import SwiftOCR
 
 class ViewController: UIViewController {
     
-    private var text = ""
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
-
-
 }
-

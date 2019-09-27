@@ -20,8 +20,6 @@ extension String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
-
-    
 }
 
 extension UITextField {

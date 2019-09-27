@@ -4,8 +4,5 @@ target 'Utilities-iOS' do
 
   pod 'Alamofire'
   pod 'SwiftLocation'
-  pod 'ImageSlideshow'
-  pod 'SwiftOCR'
-  pod 'SwiftyJSON'
   
 end
