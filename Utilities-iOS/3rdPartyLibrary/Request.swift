@@ -4,13 +4,16 @@
 import Foundation
 import Alamofire
 
+typealias onResponse = ((_ response:DataResponse<Data>)->())
+typealias onFailure = ((_ error:Error,_ response:DataResponse<Data> )->())
+
 private func send(url:String,
                   method:HTTPMethod = .post,
                   parameters:Parameters? = nil,
                   encoding:JSONEncoding = JSONEncoding.default,
                   header: HTTPHeaders,
-                  onResponse:@escaping ((_ response:DataResponse<Data>)->()),
-                  onFailure:((_ error:Error,_ response:DataResponse<Data> )->())?) {
+                  onResponse:@escaping onResponse,
+                  onFailure:onFailure?) {
     
     if (isConnectedToNetwork()) {
         Alamofire.request( url, method: method, parameters: parameters, encoding: encoding, headers: header).responseData{ response in
@@ -24,9 +27,9 @@ private func send(url:String,
                     }
                 case .failure(let error):
                     do {
-                        let errorMessage:String = String(data: (response.data)!, encoding: .utf8)!
+                        var errorMessage:String = String(data: (response.data)!, encoding: .utf8)!
                         if parameters != nil {
-//                            errorMessage += "\n *** PARAMETERS ***\n" + JSON(parameters!).rawString()!
+                            errorMessage += "\n *** PARAMETERS ***\n \(String(describing: parameters))"
                         }
                         print("CLIENT -> routes: \(url)")
                         print("CLIENT -> params: \(String(describing: parameters))")

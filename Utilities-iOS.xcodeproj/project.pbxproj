@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A354FA72360BCF000CA14F1 /* SWReveal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A354FA62360BCF000CA14F1 /* SWReveal.storyboard */; };
+		2A354FA92360BD3500CA14F1 /* FrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A354FA82360BD3500CA14F1 /* FrontViewController.swift */; };
+		2A354FAB2360BD4600CA14F1 /* RearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A354FAA2360BD4600CA14F1 /* RearViewController.swift */; };
+		2A354FAD2360C1CA00CA14F1 /* ViewGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A354FAC2360C1CA00CA14F1 /* ViewGradient.swift */; };
+		2A354FAF2360CA8C00CA14F1 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A354FAE2360CA8C00CA14F1 /* UserDefault.swift */; };
+		2A7D504A2360A8CF000D4275 /* ViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D50492360A8CF000D4275 /* ViewControllerEx.swift */; };
+		2A7D504F2360B919000D4275 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D504D2360B919000D4275 /* SWRevealViewController.m */; };
+		2AFAB5AD236055E60053D56C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFAB5AC236055E60053D56C /* View.swift */; };
+		2AFAB5AF236063490053D56C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFAB5AE236063490053D56C /* SecondViewController.swift */; };
+		2AFAB5B223607D110053D56C /* TextFieldCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFAB5B123607D110053D56C /* TextFieldCustom.swift */; };
 		3631E0D6DDBC26D7F523F74B /* Pods_Utilities_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73865062C7987936BFB03C1D /* Pods_Utilities_iOS.framework */; };
 		CE01C98323019FD700C87440 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01C98223019FD700C87440 /* Request.swift */; };
 		CE01C9872301A10A00C87440 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01C9862301A10A00C87440 /* General.swift */; };
@@ -82,7 +92,6 @@
 		CED52F5D233A1C3300B5E6D6 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED52F5C233A1C3300B5E6D6 /* Navigation.swift */; };
 		CEDF5C002301C242007426D2 /* SwiftLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */; };
 		CEDF5C082301D19D007426D2 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C072301D19D007426D2 /* Device.swift */; };
-		CEDF5C0C2301D4F0007426D2 /* SwiftGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C0B2301D4F0007426D2 /* SwiftGif.swift */; };
 		CEE85BAE233F8A89007526E5 /* PdfReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE85BAD233F8A89007526E5 /* PdfReaderViewController.swift */; };
 		CEFDBA88233D417A0077E480 /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDBA87233D417A0077E480 /* AudioPlayerViewController.swift */; };
 		CEFDBA8A233D42780077E480 /* Media.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFDBA89233D42780077E480 /* Media.storyboard */; };
@@ -90,6 +99,18 @@
 
 /* Begin PBXFileReference section */
 		1EBD14DC1D7DD13A87D28C84 /* Pods-Utilities-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utilities-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Utilities-iOS/Pods-Utilities-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		2A354FA62360BCF000CA14F1 /* SWReveal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SWReveal.storyboard; sourceTree = "<group>"; };
+		2A354FA82360BD3500CA14F1 /* FrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontViewController.swift; sourceTree = "<group>"; };
+		2A354FAA2360BD4600CA14F1 /* RearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RearViewController.swift; sourceTree = "<group>"; };
+		2A354FAC2360C1CA00CA14F1 /* ViewGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGradient.swift; sourceTree = "<group>"; };
+		2A354FAE2360CA8C00CA14F1 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		2A7D50492360A8CF000D4275 /* ViewControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEx.swift; sourceTree = "<group>"; };
+		2A7D504C2360B918000D4275 /* Utilities-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Utilities-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		2A7D504D2360B919000D4275 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		2A7D504E2360B919000D4275 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		2AFAB5AC236055E60053D56C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		2AFAB5AE236063490053D56C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2AFAB5B123607D110053D56C /* TextFieldCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustom.swift; sourceTree = "<group>"; };
 		73865062C7987936BFB03C1D /* Pods_Utilities_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Utilities_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9658D9A068CBE1411F4E33C9 /* Pods-Utilities-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utilities-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Utilities-iOS/Pods-Utilities-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CE01C98223019FD700C87440 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -168,7 +189,6 @@
 		CED52F5C233A1C3300B5E6D6 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLocation.swift; sourceTree = "<group>"; };
 		CEDF5C072301D19D007426D2 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		CEDF5C0B2301D4F0007426D2 /* SwiftGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGif.swift; sourceTree = "<group>"; };
 		CEE85BAD233F8A89007526E5 /* PdfReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfReaderViewController.swift; sourceTree = "<group>"; };
 		CEFDBA87233D417A0077E480 /* AudioPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewController.swift; sourceTree = "<group>"; };
 		CEFDBA89233D42780077E480 /* Media.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Media.storyboard; sourceTree = "<group>"; };
@@ -186,6 +206,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A7D504B2360B8CD000D4275 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2A7D504E2360B919000D4275 /* SWRevealViewController.h */,
+				2A7D504D2360B919000D4275 /* SWRevealViewController.m */,
+				2A7D504C2360B918000D4275 /* Utilities-iOS-Bridging-Header.h */,
+				2AEA88C62360BC0700EE1556 /* Files */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		2AEA88C62360BC0700EE1556 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A354FA62360BCF000CA14F1 /* SWReveal.storyboard */,
+				2A354FA82360BD3500CA14F1 /* FrontViewController.swift */,
+				2A354FAA2360BD4600CA14F1 /* RearViewController.swift */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		2AFAB5B023607CF10053D56C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				2AFAB5B123607D110053D56C /* TextFieldCustom.swift */,
+				2A354FAC2360C1CA00CA14F1 /* ViewGradient.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		2DDFB889B6F66557860FF5F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +261,9 @@
 				CED52F5C233A1C3300B5E6D6 /* Navigation.swift */,
 				CEAA5242233E38E000551546 /* Media.swift */,
 				CEAA5244233E4D3000551546 /* Number.swift */,
+				2AFAB5AC236055E60053D56C /* View.swift */,
+				2A7D50492360A8CF000D4275 /* ViewControllerEx.swift */,
+				2A354FAE2360CA8C00CA14F1 /* UserDefault.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -220,7 +273,6 @@
 			children = (
 				CE01C9862301A10A00C87440 /* General.swift */,
 				CEDF5C072301D19D007426D2 /* Device.swift */,
-				CEDF5C0B2301D4F0007426D2 /* SwiftGif.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -251,6 +303,7 @@
 				CE35BC0B22FF08CE00DC1434 /* 3rdPartyLibrary */,
 				CE35BBF922FF07DA00DC1434 /* AppDelegate.swift */,
 				CE35BBFB22FF07DA00DC1434 /* ViewController.swift */,
+				2AFAB5AE236063490053D56C /* SecondViewController.swift */,
 				CE35BBFD22FF07DA00DC1434 /* Main.storyboard */,
 				CE35BC0022FF07DC00DC1434 /* Assets.xcassets */,
 				CE35BC0222FF07DC00DC1434 /* LaunchScreen.storyboard */,
@@ -271,6 +324,8 @@
 		CE35BC0C22FF08DD00DC1434 /* StandardLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				2A7D504B2360B8CD000D4275 /* SWRevealViewController */,
+				2AFAB5B023607CF10053D56C /* CustomViews */,
 				CEE85BAC233F7FCF007526E5 /* Media */,
 				CE01C9852301A0F600C87440 /* Utils */,
 				CE01C9842301A0E600C87440 /* Extentions */,
@@ -621,6 +676,7 @@
 				TargetAttributes = {
 					CE35BBF522FF07DA00DC1434 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -653,6 +709,7 @@
 				CE35BC0422FF07DC00DC1434 /* LaunchScreen.storyboard in Resources */,
 				CEAA5241233E2E2100551546 /* pause.png in Resources */,
 				CE35BC0122FF07DC00DC1434 /* Assets.xcassets in Resources */,
+				2A354FA72360BCF000CA14F1 /* SWReveal.storyboard in Resources */,
 				CE35BBFF22FF07DA00DC1434 /* Main.storyboard in Resources */,
 				CEAA5240233E2E2100551546 /* play.png in Resources */,
 			);
@@ -706,7 +763,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7D504A2360A8CF000D4275 /* ViewControllerEx.swift in Sources */,
 				CE01C9872301A10A00C87440 /* General.swift in Sources */,
+				2A354FAF2360CA8C00CA14F1 /* UserDefault.swift in Sources */,
 				CE35BC6722FF14EB00DC1434 /* UITextView+Extensions.swift in Sources */,
 				CE650637233E01E800D843C5 /* VideoPlayerViewController.swift in Sources */,
 				CE35BC6622FF14EB00DC1434 /* String+Extensions.swift in Sources */,
@@ -717,10 +776,11 @@
 				CE35BC7F22FF14EB00DC1434 /* LocationPickerViewController.swift in Sources */,
 				CE35BC9622FF1E5B00DC1434 /* Alert.swift in Sources */,
 				CE35BC8C22FF14EB00DC1434 /* PhotoLayout.swift in Sources */,
+				2A354FA92360BD3500CA14F1 /* FrontViewController.swift in Sources */,
 				CE35BC6222FF14EB00DC1434 /* UIImageView+Extensions.swift in Sources */,
 				CE35BC6A22FF14EB00DC1434 /* UISearchBar+Extensions.swift in Sources */,
-				CEDF5C0C2301D4F0007426D2 /* SwiftGif.swift in Sources */,
 				CEDF5C082301D19D007426D2 /* Device.swift in Sources */,
+				2A354FAB2360BD4600CA14F1 /* RearViewController.swift in Sources */,
 				CE35BC7722FF14EB00DC1434 /* PhoneCodeCell.swift in Sources */,
 				CE35BC9422FF14EB00DC1434 /* Button.swift in Sources */,
 				CE35BC7822FF14EB00DC1434 /* CurrencyCell.swift in Sources */,
@@ -739,12 +799,15 @@
 				CE35BBFC22FF07DA00DC1434 /* ViewController.swift in Sources */,
 				CE35BC6322FF14EB00DC1434 /* UIViewController+Extensions.swift in Sources */,
 				CE35BC6F22FF14EB00DC1434 /* Locale+Extensions.swift in Sources */,
+				2A7D504F2360B919000D4275 /* SWRevealViewController.m in Sources */,
 				CE35BC6122FF14EB00DC1434 /* UISegmentedControl+Extensions.swift in Sources */,
 				CE35BC7222FF14EB00DC1434 /* TextViewController.swift in Sources */,
+				2AFAB5AD236055E60053D56C /* View.swift in Sources */,
 				CE35BC9122FF14EB00DC1434 /* SegmentedControl.swift in Sources */,
 				CE35BC6822FF14EB00DC1434 /* UIColor+Extensions.swift in Sources */,
 				CE35BC7A22FF14EB00DC1434 /* TwoTextFieldsViewController.swift in Sources */,
 				CE35BC7422FF14EB00DC1434 /* LocaleStore.swift in Sources */,
+				2AFAB5B223607D110053D56C /* TextFieldCustom.swift in Sources */,
 				CE35BC6E22FF14EB00DC1434 /* Common+Extensions.swift in Sources */,
 				CE35BC8022FF14EB00DC1434 /* SearchHistoryManager.swift in Sources */,
 				CE35BC8222FF14EB00DC1434 /* Address.swift in Sources */,
@@ -753,6 +816,8 @@
 				CE01C98323019FD700C87440 /* Request.swift in Sources */,
 				CE35BC8522FF14EB00DC1434 /* Contacts.swift in Sources */,
 				CE35BC8122FF14EB00DC1434 /* Location.swift in Sources */,
+				2A354FAD2360C1CA00CA14F1 /* ViewGradient.swift in Sources */,
+				2AFAB5AF236063490053D56C /* SecondViewController.swift in Sources */,
 				CEAA5247233E5FC900551546 /* Subtitle.swift in Sources */,
 				CEAA5243233E38E000551546 /* Media.swift in Sources */,
 				CE35BC7022FF14EB00DC1434 /* UITextField+Extensions.swift in Sources */,
@@ -924,6 +989,7 @@
 			baseConfigurationReference = 9658D9A068CBE1411F4E33C9 /* Pods-Utilities-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U529LCXR28;
 				INFOPLIST_FILE = "Utilities-iOS/Info.plist";
@@ -933,6 +999,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sinamn75.Utilities-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Utilities-iOS/StandardLibrary/SWRevealViewController/Utilities-iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -943,6 +1011,7 @@
 			baseConfigurationReference = 1EBD14DC1D7DD13A87D28C84 /* Pods-Utilities-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U529LCXR28;
 				INFOPLIST_FILE = "Utilities-iOS/Info.plist";
@@ -952,6 +1021,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sinamn75.Utilities-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Utilities-iOS/StandardLibrary/SWRevealViewController/Utilities-iOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

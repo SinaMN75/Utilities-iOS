@@ -27,14 +27,12 @@ private struct AssociatedKeys {
         
         // Parse string
         parsedPayload = Subtitles.parseSubRip(string)
-        
     }
     
     @objc public init(subtitles string: String) {
         
         // Parse string
         parsedPayload = Subtitles.parseSubRip(string)
-        
     }
     
     /// Search subtitles at time
