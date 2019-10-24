@@ -58,7 +58,7 @@ open class Device {
         }
     }
     
-    static fileprivate func getType(code: String) -> Type {
+    static fileprivate func getType(code: String) -> Typee {
         let versionCode = getVersionCode()
         
         if versionCode.contains("iPhone") {
@@ -114,7 +114,7 @@ open class Device {
         }
     }
     
-    static public func type() -> Type {
+    static public func type() -> Typee {
         return getType(code: getVersionCode())
     }
     
@@ -190,7 +190,7 @@ public enum Size: Int, Comparable {
     #endif
 }
 
-public enum Type: String {
+public enum Typee: String {
     #if os(iOS)
     case iPhone
     case iPad
@@ -318,7 +318,7 @@ func deviceScreenSize() -> Size {
     }
 }
 
-func deviceType() -> Type {
+func deviceType() -> Typee {
     switch Device.type() {
     case .iPod:         return .iPod
     case .iPhone:       return .iPhone

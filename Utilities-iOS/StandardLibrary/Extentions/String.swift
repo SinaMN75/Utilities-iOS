@@ -6,7 +6,7 @@ import UIKit
 extension String {
     
     // MARK: Replace the first string with the second one.
-    func replace(_ target: String, _ withString: String) -> String {
+    func replace(from target: String, to withString: String) -> String {
         return self.replacingOccurrences(of: target, with: withString)
     }
     
@@ -19,20 +19,16 @@ extension String {
     func trim() -> String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
-    
 }
 
 extension UITextField {
     
-    func trimmedString() -> String {
-        return self.text?.trim() ?? ""
-    }
+    // MARK: - Returns trimmed string from UITextField.
+    func trimmedString() -> String { return self.text?.trim() ?? "" }
     
+    // MARK: - Validates the text inside of the UITextField with it's length.
     func validateInputByLength(length: Int) -> Bool {
-        if self.text?.trimmedLength() ?? 0 < length {
-            return false
-        } else {
-            return true
-        }
+        if self.text?.trimmedLength() ?? 0 < length { return false }
+        else { return true }
     }
 }

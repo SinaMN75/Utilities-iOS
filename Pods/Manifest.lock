@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.8.2)
+  - IQKeyboardManagerSwift (6.5.1)
   - SwiftLocation (4.0.2)
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManagerSwift
   - SwiftLocation
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - IQKeyboardManagerSwift
     - SwiftLocation
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  IQKeyboardManagerSwift: 9ac7524fad9f9fe9a3b98c927e7772471ca546d2
   SwiftLocation: 4f030832331a21abaa4e0c5189d0f80ab8d3e377
 
-PODFILE CHECKSUM: f888433362a337554033eb8567bb06eaf450e555
+PODFILE CHECKSUM: 79b4a7dd79c5a031df3476059edeb2b818328eda
 
 COCOAPODS: 1.5.2

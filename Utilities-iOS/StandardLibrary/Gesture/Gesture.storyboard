@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gesture View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GestureViewController" customModule="Utilities_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CradleMountain.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="mdf-f1-oDZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="U2M-8s-R2g" appends="YES" id="HfS-iI-H5r"/>
+                                    <outletCollection property="gestureRecognizers" destination="oSX-r5-vMW" appends="YES" id="Waa-Qf-VtM"/>
+                                    <outletCollection property="gestureRecognizers" destination="spU-4D-0zG" appends="YES" id="Nqa-fL-IaF"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mdf-f1-oDZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="02f-Fu-nRF"/>
+                            <constraint firstItem="mdf-f1-oDZ" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="7E2-Tk-jAU"/>
+                            <constraint firstItem="mdf-f1-oDZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="erC-Mr-qJA"/>
+                            <constraint firstItem="mdf-f1-oDZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="sG9-9Y-kWn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N64-DR-ZCH"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="mdf-f1-oDZ" id="phW-cq-xuI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="U2M-8s-R2g">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="Vo5-fX-oRm"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="kKW-wF-1t9"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="oSX-r5-vMW">
+                    <connections>
+                        <action selector="handelPinch:" destination="BYZ-38-t0r" id="xiR-mh-rQC"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="gW1-ES-I4m"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="spU-4D-0zG">
+                    <connections>
+                        <action selector="handleRotate:" destination="BYZ-38-t0r" id="khK-kA-Cxc"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="c6p-wN-zwu"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="299" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CradleMountain.JPG" width="2048" height="1152"/>
+    </resources>
+</document>
