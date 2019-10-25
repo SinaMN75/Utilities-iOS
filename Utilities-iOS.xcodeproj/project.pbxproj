@@ -15,6 +15,11 @@
 		2A73AA54236232FF00B4A88E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A73AA53236232FF00B4A88E /* SwiftyJSON.swift */; };
 		2A7D504A2360A8CF000D4275 /* ViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D50492360A8CF000D4275 /* ViewControllerEx.swift */; };
 		2A7D504F2360B919000D4275 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D504D2360B919000D4275 /* SWRevealViewController.m */; };
+		2A8F22DB2362CE9800AC6937 /* CoreMotionEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22DA2362CE9800AC6937 /* CoreMotionEx.swift */; };
+		2A8F22DD2362D9A600AC6937 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8F22DC2362D9A600AC6937 /* MapKit.framework */; };
+		2A8F22E02362DA4300AC6937 /* MapKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F22DF2362DA4300AC6937 /* MapKit.storyboard */; };
+		2A8F22E22362DA5600AC6937 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */; };
+		2A8F22E42362DEE500AC6937 /* MapKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E32362DEE500AC6937 /* MapKitEx.swift */; };
 		2AD8D2F0236185B600407310 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8D2EF236185B600407310 /* ColorEx.swift */; };
 		2AD8D2F523618DF800407310 /* Gesture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD8D2F423618DF800407310 /* Gesture.storyboard */; };
 		2AD8D2F723618E0C00407310 /* CradleMountain.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2AD8D2F623618E0C00407310 /* CradleMountain.JPG */; };
@@ -115,6 +120,11 @@
 		2A7D504C2360B918000D4275 /* Utilities-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Utilities-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		2A7D504D2360B919000D4275 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2A7D504E2360B919000D4275 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		2A8F22DA2362CE9800AC6937 /* CoreMotionEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionEx.swift; sourceTree = "<group>"; };
+		2A8F22DC2362D9A600AC6937 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2A8F22DF2362DA4300AC6937 /* MapKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapKit.storyboard; sourceTree = "<group>"; };
+		2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
+		2A8F22E32362DEE500AC6937 /* MapKitEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitEx.swift; sourceTree = "<group>"; };
 		2AD8D2EF236185B600407310 /* ColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEx.swift; sourceTree = "<group>"; };
 		2AD8D2F423618DF800407310 /* Gesture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gesture.storyboard; sourceTree = "<group>"; };
 		2AD8D2F623618E0C00407310 /* CradleMountain.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CradleMountain.JPG; sourceTree = "<group>"; };
@@ -210,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8F22DD2362D9A600AC6937 /* MapKit.framework in Frameworks */,
 				3631E0D6DDBC26D7F523F74B /* Pods_Utilities_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +245,15 @@
 				2AEA88C62360BC0700EE1556 /* Files */,
 			);
 			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		2A8F22DE2362D9D800AC6937 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				2A8F22DF2362DA4300AC6937 /* MapKit.storyboard */,
+				2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */,
+			);
+			path = MapKit;
 			sourceTree = "<group>";
 		};
 		2AD8D2F323618DD500407310 /* Gesture */ = {
@@ -268,6 +288,7 @@
 		2DDFB889B6F66557860FF5F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A8F22DC2362D9A600AC6937 /* MapKit.framework */,
 				73865062C7987936BFB03C1D /* Pods_Utilities_iOS.framework */,
 			);
 			name = Frameworks;
@@ -294,6 +315,8 @@
 				2A7D50492360A8CF000D4275 /* ViewControllerEx.swift */,
 				2A354FAE2360CA8C00CA14F1 /* Data.swift */,
 				2AD8D2EF236185B600407310 /* ColorEx.swift */,
+				2A8F22DA2362CE9800AC6937 /* CoreMotionEx.swift */,
+				2A8F22E32362DEE500AC6937 /* MapKitEx.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -355,6 +378,7 @@
 		CE35BC0C22FF08DD00DC1434 /* StandardLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				2A8F22DE2362D9D800AC6937 /* MapKit */,
 				2A73AA52236232F000B4A88E /* SwiftyJSON */,
 				2AD8D2F323618DD500407310 /* Gesture */,
 				2A7D504B2360B8CD000D4275 /* SWRevealViewController */,
@@ -746,6 +770,7 @@
 				CE35BC0122FF07DC00DC1434 /* Assets.xcassets in Resources */,
 				2A354FA72360BCF000CA14F1 /* SWReveal.storyboard in Resources */,
 				CE35BBFF22FF07DA00DC1434 /* Main.storyboard in Resources */,
+				2A8F22E02362DA4300AC6937 /* MapKit.storyboard in Resources */,
 				CEAA5240233E2E2100551546 /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -821,6 +846,7 @@
 				CE35BC7722FF14EB00DC1434 /* PhoneCodeCell.swift in Sources */,
 				CE35BC9422FF14EB00DC1434 /* Button.swift in Sources */,
 				CE35BC7822FF14EB00DC1434 /* CurrencyCell.swift in Sources */,
+				2A8F22DB2362CE9800AC6937 /* CoreMotionEx.swift in Sources */,
 				CE5226FC22FF372D007F5A9D /* Image.swift in Sources */,
 				CE35BC0E22FF08F400DC1434 /* String.swift in Sources */,
 				CE35BC8E22FF14EB00DC1434 /* ItemWithPhoto.swift in Sources */,
@@ -849,6 +875,7 @@
 				CE35BC7422FF14EB00DC1434 /* LocaleStore.swift in Sources */,
 				2AFAB5B223607D110053D56C /* TextFieldCustom.swift in Sources */,
 				CE35BC6E22FF14EB00DC1434 /* Common+Extensions.swift in Sources */,
+				2A8F22E22362DA5600AC6937 /* MapKitViewController.swift in Sources */,
 				CE35BC8022FF14EB00DC1434 /* SearchHistoryManager.swift in Sources */,
 				CE35BC8222FF14EB00DC1434 /* Address.swift in Sources */,
 				CE35BC7E22FF14EB00DC1434 /* LocationSearchResultsViewController.swift in Sources */,
@@ -878,6 +905,7 @@
 				CE35BC9222FF14EB00DC1434 /* GradientSlider.swift in Sources */,
 				CE35BC8822FF14EB00DC1434 /* ColorPickerViewController.swift in Sources */,
 				CE35BC8B22FF14EB00DC1434 /* ItemWithImage.swift in Sources */,
+				2A8F22E42362DEE500AC6937 /* MapKitEx.swift in Sources */,
 				CE35BC8322FF14EB00DC1434 /* PickerViewViewController.swift in Sources */,
 				CE35BC7B22FF14EB00DC1434 /* OneTextFieldViewController.swift in Sources */,
 				CE35BC7522FF14EB00DC1434 /* LocaleInfo.swift in Sources */,
