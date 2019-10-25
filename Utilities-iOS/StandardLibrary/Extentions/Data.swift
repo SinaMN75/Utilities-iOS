@@ -21,5 +21,10 @@ func getBool(key: String) -> Bool? { return defaults.bool(forKey: key) }
 func getURL(key: String) -> URL? { return defaults.url(forKey: key) }
 func getAny(key: String) -> Any? { return defaults.value(forKey: key) }
 
+func delete(key: String) { defaults.removeObject(forKey: key) }
+func deleteAll() {
+    UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+    UserDefaults.standard.synchronize()
+}
 
 let documentDirectory: URL = { return FileManager().urls(for: .documentDirectory , in: .userDomainMask).first! }()

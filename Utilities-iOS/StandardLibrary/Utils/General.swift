@@ -19,7 +19,7 @@ func isConnectedToNetwork() -> Bool {
     if SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) == false {
         return false
     }
-
+    
     let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
     let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
     let ret = (isReachable && !needsConnection)
@@ -27,4 +27,12 @@ func isConnectedToNetwork() -> Bool {
     return ret
 }
 
-
+func getTopVC() -> UIViewController{
+    if var topController:UIViewController = UIApplication.shared.keyWindow?.rootViewController {
+        while let presentedViewController = topController.presentedViewController {
+            topController = presentedViewController
+        }
+        return topController
+    }
+    return UIViewController()
+}

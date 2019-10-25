@@ -5,8 +5,8 @@ import UIKit
 
 extension UIViewController {
     
+    // MARK: - Adds a button on top of the keyboard for a certain UITextField.
     /**
-     This function will create a button and show it when user focused on the given TextField.
      need to call  [ view.endEditing(true) ] at the end of action selector to close the keyboard.
      */
     func setupInputAccesoryButton(textField: UITextField,
@@ -35,7 +35,7 @@ extension UIViewController {
         self.navigationItem.searchController = searchController
     }
     
-    //MARK: - Can get image from camera.
+    //MARK: - image from camera.
     /**
      Must hold Privacy - Camera Usage Description in the info.plist file and camera selected in the Hardened Runtime.
      Also must implement UIImagePickerControllerDelegate and UINavigationControllerDelegate in used ViewController.
@@ -54,7 +54,7 @@ extension UIViewController {
         }
     }
     
-    //MARK: - Can get image from photo library.
+    //MARK: - image from photo library.
     /**
      Must hold Privacy - Photo Library Usage Description in the info.plist file.
      Also must implement UIImagePickerControllerDelegate and UINavigationControllerDelegate in used ViewController.
@@ -140,5 +140,24 @@ extension UIViewController {
         button2.addTarget(self, action: action2, for: .touchUpInside)
         self.navigationItem.leftBarButtonItems = [UIBarButtonItem(customView: button1),
                                                   UIBarButtonItem(customView: button2)]
+    }
+    
+    func grgToSh(gerogorianDateString:String) -> String{
+        var dateString = gerogorianDateString
+        if dateString.count == 10 {
+            dateString += " 00:00:00"
+        }
+        if dateString.count > 19 {
+            dateString = String(dateString.dropLast(dateString.count - 19))
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let gerogorianDate = formatter.date(from: dateString)
+        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.calendar = Calendar(identifier: .persian)
+        if let date = gerogorianDate
+        {return formatter.string(from: date)}
+        return ""
     }
 }
