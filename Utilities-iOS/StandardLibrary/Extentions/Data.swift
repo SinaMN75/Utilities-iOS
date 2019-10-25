@@ -22,10 +22,4 @@ func getURL(key: String) -> URL? { return defaults.url(forKey: key) }
 func getAny(key: String) -> Any? { return defaults.value(forKey: key) }
 
 
-let appSupportDirectory: URL = {
-    let url = FileManager().urls(for: .applicationSupportDirectory , in: .userDomainMask).first!
-    if !FileManager().fileExists(atPath: url.path) {
-        try? FileManager().createDirectory(at: url, withIntermediateDirectories: false)
-    }
-    return url
-}()
+let documentDirectory: URL = { return FileManager().urls(for: .documentDirectory , in: .userDomainMask).first! }()

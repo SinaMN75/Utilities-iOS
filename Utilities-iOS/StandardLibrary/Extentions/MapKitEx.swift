@@ -45,14 +45,10 @@ extension MKMapView {
     }
     
     func updateRegion(_ coordinate2D: CLLocationCoordinate2D, range: CLLocationDistance = 100) {
-        let region = MKCoordinateRegion.init(center: coordinate2D, latitudinalMeters: range, longitudinalMeters: range)
-        self.region = region
+        self.region = MKCoordinateRegion.init(center: coordinate2D, latitudinalMeters: range, longitudinalMeters: range)
     }
     
-    func updateCamera(coordinate2D: CLLocationCoordinate2D,
-                      altitude: Double,
-                      heading: Double = 0.0,
-                      pitch: Double = 0.0) {
+    func updateCamera(coordinate2D: CLLocationCoordinate2D, altitude: Double, heading: Double = 0.0, pitch: Double = 0.0) {
         let camera = MKMapCamera()
         camera.centerCoordinate = coordinate2D
         camera.altitude = altitude
@@ -101,7 +97,6 @@ extension MKMapView {
      }
      return MKOverlayRenderer(overlay: overlay)
      }
-     
      */
     
     func addAnnotation(coordinate: CLLocationCoordinate2D,

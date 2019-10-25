@@ -20,6 +20,7 @@
 		2A8F22E02362DA4300AC6937 /* MapKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F22DF2362DA4300AC6937 /* MapKit.storyboard */; };
 		2A8F22E22362DA5600AC6937 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */; };
 		2A8F22E42362DEE500AC6937 /* MapKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E32362DEE500AC6937 /* MapKitEx.swift */; };
+		2A8F22EA236350AD00AC6937 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E9236350AD00AC6937 /* NavigationViewController.swift */; };
 		2AD8D2F0236185B600407310 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8D2EF236185B600407310 /* ColorEx.swift */; };
 		2AD8D2F523618DF800407310 /* Gesture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD8D2F423618DF800407310 /* Gesture.storyboard */; };
 		2AD8D2F723618E0C00407310 /* CradleMountain.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2AD8D2F623618E0C00407310 /* CradleMountain.JPG */; };
@@ -125,6 +126,7 @@
 		2A8F22DF2362DA4300AC6937 /* MapKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapKit.storyboard; sourceTree = "<group>"; };
 		2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		2A8F22E32362DEE500AC6937 /* MapKitEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitEx.swift; sourceTree = "<group>"; };
+		2A8F22E9236350AD00AC6937 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		2AD8D2EF236185B600407310 /* ColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEx.swift; sourceTree = "<group>"; };
 		2AD8D2F423618DF800407310 /* Gesture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gesture.storyboard; sourceTree = "<group>"; };
 		2AD8D2F623618E0C00407310 /* CradleMountain.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CradleMountain.JPG; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			children = (
 				2AFAB5B123607D110053D56C /* TextFieldCustom.swift */,
 				2A354FAC2360C1CA00CA14F1 /* ViewGradient.swift */,
+				2A8F22E9236350AD00AC6937 /* NavigationViewController.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 				2A7D504A2360A8CF000D4275 /* ViewControllerEx.swift in Sources */,
 				CE01C9872301A10A00C87440 /* General.swift in Sources */,
 				2A354FAF2360CA8C00CA14F1 /* Data.swift in Sources */,
+				2A8F22EA236350AD00AC6937 /* NavigationViewController.swift in Sources */,
 				CE35BC6722FF14EB00DC1434 /* UITextView+Extensions.swift in Sources */,
 				CE650637233E01E800D843C5 /* VideoPlayerViewController.swift in Sources */,
 				CE35BC6622FF14EB00DC1434 /* String+Extensions.swift in Sources */,

@@ -37,9 +37,6 @@ class MapKitViewController: UIViewController, MKMapViewDelegate {
         
         mapView.setup()
         
-        getAddress(coordinates: coordinate2D)
-        
-        
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

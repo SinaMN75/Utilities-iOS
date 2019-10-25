@@ -5,8 +5,6 @@ import UIKit
 import CoreMotion
 
 class ViewController: UIViewController, UISearchResultsUpdating, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    var pedometer = CMPedometer()
-    
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textField: TextFieldTransparent!
@@ -14,20 +12,26 @@ class ViewController: UIViewController, UISearchResultsUpdating, UIImagePickerCo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupInputAccesoryButton(textField: textField, action: #selector(hello))
-        setupSearchBar()
-        getImage()
+        //setupInputAccesoryButton(textField: textField, action: #selector(hello))
+        //setupSearchBar()
+        //getImage()
         
+        setupTransparentNavigationBar(withShadow: true)
+        setupImageTitleNavigationBar(image: "ir")
+        setupBackBarButtonTitle(title: "backkkkk")
+        setupLeftBarButtonItem(image: "ir", action: #selector(onLeftClicked))
         
-        if CMPedometer.isStepCountingAvailable() {
-            pedometer.startUpdates(from: Date()) { data, e in
-                if let data = data {
-                    print(data)
-                }
-            }
-        } else {
-            print("Step counter is not available")
-        }
+        setupBackBarButtonIndicator(image: "ir")
+        
+        setupRightBarButtonItems(image1: "ir",
+                                 image2: "ir",
+                                 action1: #selector(onLeftClicked),
+                                 action2: #selector(onLeftClicked))
+        
+    }
+    
+    @objc func onLeftClicked() {
+        print("hello")
     }
     
     @objc func keyboard() {}
@@ -37,7 +41,7 @@ class ViewController: UIViewController, UISearchResultsUpdating, UIImagePickerCo
     func updateSearchResults(for searchController: UISearchController) {}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as?  SecondViewController { vc.name = "helllllooooooo" }
+        if let vc = segue.destination as? SecondViewController { vc.name = "hello" }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

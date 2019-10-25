@@ -7,7 +7,7 @@ import SwiftUI
 extension UIColor {
     
     // MARK:- Converts Hex color to RGBA color.
-    public convenience init?(hex: String) {
+    convenience init?(hex: String) {
         let r, g, b, a: CGFloat
         
         if hex.hasPrefix("#") {

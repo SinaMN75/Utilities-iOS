@@ -7,7 +7,7 @@ import ImageIO
 
 extension UIImageView {
     
-    public func loadGif(name: String) {
+    func loadGif(name: String) {
         DispatchQueue.global().async {
             let image = UIImage.gif(name: name)
             DispatchQueue.main.async {
@@ -16,7 +16,7 @@ extension UIImageView {
         }
     }
     
-    public func loadGif(asset: String) {
+    func loadGif(asset: String) {
         DispatchQueue.global().async {
             let image = UIImage.gif(asset: asset)
             DispatchQueue.main.async {
@@ -24,11 +24,10 @@ extension UIImageView {
             }
         }
     }
-    
 }
 
 extension UIImage {
-    public class func gif(data: Data) -> UIImage? {
+    class func gif(data: Data) -> UIImage? {
         guard let source = CGImageSourceCreateWithData(data as CFData, nil) else {
             print("SwiftGif: Source for the image does not exist")
             return nil
@@ -37,7 +36,7 @@ extension UIImage {
         return UIImage.animatedImageWithSource(source)
     }
     
-    public class func gif(url: String) -> UIImage? {
+    class func gif(url: String) -> UIImage? {
         guard let bundleURL = URL(string: url) else {
             print("SwiftGif: This image named \"\(url)\" does not exist")
             return nil
@@ -51,7 +50,7 @@ extension UIImage {
         return gif(data: imageData)
     }
     
-    public class func gif(name: String) -> UIImage? {
+    class func gif(name: String) -> UIImage? {
         guard let bundleURL = Bundle.main.url(forResource: name, withExtension: "gif") else {
             print("SwiftGif: This image named \"\(name)\" does not exist")
             return nil
@@ -65,8 +64,7 @@ extension UIImage {
         return gif(data: imageData)
     }
     
-    @available(iOS 9.0, *)
-    public class func gif(asset: String) -> UIImage? {
+    class func gif(asset: String) -> UIImage? {
         guard let dataAsset = NSDataAsset(name: asset) else {
             print("SwiftGif: Cannot turn image named \"\(asset)\" into NSDataAsset")
             return nil
@@ -75,7 +73,7 @@ extension UIImage {
         return gif(data: dataAsset.data)
     }
     
-    internal class func delayForImageAtIndex(_ index: Int, source: CGImageSource!) -> Double {
+    class func delayForImageAtIndex(_ index: Int, source: CGImageSource!) -> Double {
         var delay = 0.1
         
         let cfProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil)
@@ -106,7 +104,7 @@ extension UIImage {
         return delay
     }
     
-    internal class func gcdForPair(_ lhs: Int?, _ rhs: Int?) -> Int {
+    class func gcdForPair(_ lhs: Int?, _ rhs: Int?) -> Int {
         var lhs = lhs
         var rhs = rhs
         if rhs == nil || lhs == nil {
@@ -138,7 +136,7 @@ extension UIImage {
         }
     }
     
-    internal class func gcdForArray(_ array: [Int]) -> Int {
+    class func gcdForArray(_ array: [Int]) -> Int {
         if array.isEmpty {
             return 1
         }
@@ -150,7 +148,7 @@ extension UIImage {
         return gcd
     }
     
-    internal class func animatedImageWithSource(_ source: CGImageSource) -> UIImage? {
+    class func animatedImageWithSource(_ source: CGImageSource) -> UIImage? {
         let count = CGImageSourceGetCount(source)
         var images = [CGImage]()
         var delays = [Int]()
@@ -204,4 +202,9 @@ extension PHAsset {
         })
         return thumbnail
     }
+}
+
+
+func makeImage(_ image: String) -> UIImage {
+    return UIImage(named: image)?.withRenderingMode(.alwaysOriginal) ?? UIImage()
 }

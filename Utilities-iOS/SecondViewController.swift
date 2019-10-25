@@ -11,6 +11,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         
         print(name)
+    
         
     }
     

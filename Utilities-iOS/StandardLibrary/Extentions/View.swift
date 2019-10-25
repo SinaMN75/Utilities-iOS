@@ -22,3 +22,13 @@ extension UIView {
         }) { finished in completion() }
     }
 }
+
+extension UIViewController {
+    func makeImageButton(image: String, action: Selector) -> UIButton{
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: image)?.withRenderingMode(.alwaysOriginal), for: .normal)
+        button.sizeToFit()
+        button.addTarget(self, action: action, for: .touchUpInside)
+        return button
+    }
+}

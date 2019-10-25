@@ -14,7 +14,7 @@ extension UIViewController {
                                   backgroundColor: UIColor = .systemBlue,
                                   titleColor: UIColor = .white,
                                   action: Selector) {
-                
+        
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 60))
         button.backgroundColor = backgroundColor
         button.setTitle(title, for: .normal)
@@ -72,5 +72,73 @@ extension UIViewController {
             imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
             
         }
+    }
+    
+    // MARK: - NAVIGATION CONTROLLER
+    
+    func setupTransparentNavigationBar(withShadow: Bool) {
+        navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        if !withShadow {
+            navigationController?.navigationBar.shadowImage = UIImage()
+        }
+    }
+    
+    func setupImageTitleNavigationBar(image: String) {
+        let image = UIImageView(image: UIImage(named: image))
+        image.sizeToFit()
+        navigationItem.titleView = image
+    }
+    
+    func setupTextTitleNavigationBar(title: String) {
+        let label = UILabel()
+        label.text = title
+        label.sizeToFit()
+        navigationItem.titleView = label
+    }
+    
+    func setupBackBarButtonTitle(title: String) {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
+    }
+    
+    func setupBackBarButtonIndicator(image: String, withText: Bool = false) {
+        navigationController?.navigationBar.backIndicatorImage = makeImage(image)
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = makeImage(image)
+        if !withText {
+            setupBackBarButtonTitle(title: "")
+        }
+    }
+    
+    func setupLeftBarButtonItem(image: String, action: Selector) {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: image)?.withRenderingMode(.alwaysOriginal), for: .normal)
+        button.sizeToFit()
+        button.addTarget(self, action: action, for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+    }
+    
+    func setupRightBarButtonItem(image: String, action: Selector) {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: image)?.withRenderingMode(.alwaysOriginal), for: .normal)
+        button.sizeToFit()
+        button.addTarget(self, action: action, for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+    }
+    
+    func setupRightBarButtonItems(image1: String, image2: String, action1: Selector, action2: Selector) {
+        let button1 = self.makeImageButton(image: image1, action: action1)
+        let button2 = self.makeImageButton(image: image1, action: action2)
+        button1.addTarget(self, action: action1, for: .touchUpInside)
+        button2.addTarget(self, action: action2, for: .touchUpInside)
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: button1),
+                                                   UIBarButtonItem(customView: button2)]
+    }
+    
+    func setupLeftBarButtonItems(image1: String, image2: String, action1: Selector, action2: Selector) {
+        let button1 = self.makeImageButton(image: image1, action: action1)
+        let button2 = self.makeImageButton(image: image1, action: action2)
+        button1.addTarget(self, action: action1, for: .touchUpInside)
+        button2.addTarget(self, action: action2, for: .touchUpInside)
+        self.navigationItem.leftBarButtonItems = [UIBarButtonItem(customView: button1),
+                                                  UIBarButtonItem(customView: button2)]
     }
 }
