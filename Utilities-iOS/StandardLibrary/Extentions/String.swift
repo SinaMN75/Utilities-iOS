@@ -43,36 +43,7 @@ extension String {
         }
         return ""
     }
-    
-    func asMoney() -> String {
-        var mainPrice = self
-        var floatPrice = ""
-        var suffix = ""
-        switch self.count{
-        case 0...3:
-            floatPrice = "0"
-        case 4...6:
-            suffix = "هزار"
-            floatPrice = mainPrice[mainPrice.count - 3]
-            let endIndex = mainPrice.index(mainPrice.endIndex, offsetBy: -3)
-            mainPrice = mainPrice.substring(to: endIndex)
-        case 7...9:
-            suffix = "میلیون"
-            floatPrice = mainPrice[mainPrice.count - 6]
-            let endIndex = mainPrice.index(mainPrice.endIndex, offsetBy: -6)
-            mainPrice = mainPrice.substring(to: endIndex)
-        case 10...12:
-            suffix = "میلیارد"
-            floatPrice = mainPrice[mainPrice.count - 9]
-            let endIndex = mainPrice.index(mainPrice.endIndex, offsetBy: -9)
-            mainPrice = mainPrice.substring(to: endIndex)
-        default:
-            break
-        }
-        if floatPrice == "0" { return mainPrice + " " + suffix }
-        return mainPrice + "/" + floatPrice + " " + suffix
-    }
-    
+
 }
 
 extension UITextField {

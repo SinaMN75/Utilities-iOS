@@ -27,7 +27,7 @@ func isConnectedToNetwork() -> Bool {
     return ret
 }
 
-func getTopVC() -> UIViewController{
+func topVC() -> UIViewController{
     if var topController:UIViewController = UIApplication.shared.keyWindow?.rootViewController {
         while let presentedViewController = topController.presentedViewController {
             topController = presentedViewController
