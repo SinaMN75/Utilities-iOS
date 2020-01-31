@@ -5,5 +5,6 @@ target 'Utilities-iOS' do
   pod 'Alamofire'
   pod 'SwiftLocation'
   pod 'IQKeyboardManagerSwift'
+  pod 'GoogleMaps'
   
 end

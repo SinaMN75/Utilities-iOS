@@ -16,14 +16,14 @@ class ViewController: UIViewController, UISearchResultsUpdating, UIImagePickerCo
         //setupSearchBar()
         //getImage()
         
-        setupTransparentNavigationBar(withShadow: true)
-        setupImageTitleNavigationBar(image: "ir")
-        setupBackBarButtonTitle(title: "backkkkk")
-        setupLeftBarButtonItem(image: "ir", action: #selector(onLeftClicked))
+        transparentNavigationBar(withShadow: true)
+        navigationBarImageTitle(image: "ir")
+        backBarButton(title: "backkkkk")
+        leftBarButtonItem(image: "ir", action: #selector(onLeftClicked))
         
-        setupBackBarButtonIndicator(image: "ir")
+        backBarButtonIndicator(image: "ir")
         
-        setupRightBarButtonItems(image1: "ir",
+        rightBarButtonItems(image1: "ir",
                                  image2: "ir",
                                  action1: #selector(onLeftClicked),
                                  action2: #selector(onLeftClicked))

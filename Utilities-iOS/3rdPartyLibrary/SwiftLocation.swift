@@ -8,7 +8,7 @@ func currentLocation(locationResult: @escaping (Double, Double) -> Void) {
     LocationManager.shared.locateFromGPS(.continous, accuracy: .house) { result in
         switch result {
         case .failure( _):
-            alert(topVC(), title: "خطا", message: "خطا در دریافت موقعیت", buttonTitle: "باشه")
+            alert(title: "خطا", message: "خطا در دریافت موقعیت", buttonTitle: "باشه")
         case .success(let location):
             locationResult(location.coordinate.latitude, location.coordinate.longitude)
         }
