@@ -19,8 +19,6 @@
 		2A8F22E22362DA5600AC6937 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */; };
 		2A8F22E42362DEE500AC6937 /* MapKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E32362DEE500AC6937 /* MapKitEx.swift */; };
 		2A8F22EA236350AD00AC6937 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E9236350AD00AC6937 /* NavigationViewController.swift */; };
-		2A9D562623967E88005A9D44 /* ImageTracking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9D562523967E88005A9D44 /* ImageTracking.storyboard */; };
-		2A9D562823967E99005A9D44 /* ImageTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D562723967E99005A9D44 /* ImageTrackingViewController.swift */; };
 		2AD017D323755527000B03CA /* GoogleMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD017D223755527000B03CA /* GoogleMap.storyboard */; };
 		2AD017D523755534000B03CA /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD017D423755534000B03CA /* GoogleMapViewController.swift */; };
 		2AD8D2F0236185B600407310 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8D2EF236185B600407310 /* ColorEx.swift */; };
@@ -30,7 +28,6 @@
 		2AE87C0A237A894A003001DA /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE87C09237A894A003001DA /* Label.swift */; };
 		2AECAF5A23DEE65900B699EA /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AECAF5923DEE65900B699EA /* Strings.swift */; };
 		2AFAB5AD236055E60053D56C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFAB5AC236055E60053D56C /* View.swift */; };
-		2AFAB5AF236063490053D56C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFAB5AE236063490053D56C /* SecondViewController.swift */; };
 		2AFAB5B223607D110053D56C /* TextFieldCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFAB5B123607D110053D56C /* TextFieldCustom.swift */; };
 		3631E0D6DDBC26D7F523F74B /* Pods_Utilities_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73865062C7987936BFB03C1D /* Pods_Utilities_iOS.framework */; };
 		CE01C98323019FD700C87440 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01C98223019FD700C87440 /* Alamofire.swift */; };
@@ -72,8 +69,6 @@
 		2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		2A8F22E32362DEE500AC6937 /* MapKitEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitEx.swift; sourceTree = "<group>"; };
 		2A8F22E9236350AD00AC6937 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		2A9D562523967E88005A9D44 /* ImageTracking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageTracking.storyboard; sourceTree = "<group>"; };
-		2A9D562723967E99005A9D44 /* ImageTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTrackingViewController.swift; sourceTree = "<group>"; };
 		2AD017D223755527000B03CA /* GoogleMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoogleMap.storyboard; sourceTree = "<group>"; };
 		2AD017D423755534000B03CA /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
 		2AD8D2EF236185B600407310 /* ColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEx.swift; sourceTree = "<group>"; };
@@ -83,7 +78,6 @@
 		2AE87C09237A894A003001DA /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		2AECAF5923DEE65900B699EA /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2AFAB5AC236055E60053D56C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		2AFAB5AE236063490053D56C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2AFAB5B123607D110053D56C /* TextFieldCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustom.swift; sourceTree = "<group>"; };
 		73865062C7987936BFB03C1D /* Pods_Utilities_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Utilities_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9658D9A068CBE1411F4E33C9 /* Pods-Utilities-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utilities-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Utilities-iOS/Pods-Utilities-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,14 +138,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		2A73AA52236232F000B4A88E /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				2A73AA53236232FF00B4A88E /* SwiftyJSON.swift */,
-			);
-			path = SwiftyJSON;
-			sourceTree = "<group>";
-		};
 		2A8F22DE2362D9D800AC6937 /* MapKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,23 +145,6 @@
 				2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */,
 			);
 			path = MapKit;
-			sourceTree = "<group>";
-		};
-		2A9D55FE2396714E005A9D44 /* ARKit */ = {
-			isa = PBXGroup;
-			children = (
-				2A9D562423967E71005A9D44 /* ImageTracking */,
-			);
-			path = ARKit;
-			sourceTree = "<group>";
-		};
-		2A9D562423967E71005A9D44 /* ImageTracking */ = {
-			isa = PBXGroup;
-			children = (
-				2A9D562523967E88005A9D44 /* ImageTracking.storyboard */,
-				2A9D562723967E99005A9D44 /* ImageTrackingViewController.swift */,
-			);
-			path = ImageTracking;
 			sourceTree = "<group>";
 		};
 		2AD017D02375550D000B03CA /* GoogleMap */ = {
@@ -267,7 +236,6 @@
 		CE35BBF822FF07DA00DC1434 /* Utilities-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2A9D55FE2396714E005A9D44 /* ARKit */,
 				2A2E2F67238EE5AE0017E592 /* Base */,
 				2A73AA51236217EC00B4A88E /* Utilities-iOS.entitlements */,
 				CEAA523C233E2E0A00551546 /* src */,
@@ -275,7 +243,6 @@
 				CE35BC0B22FF08CE00DC1434 /* 3rdPartyLibrary */,
 				CE35BBF922FF07DA00DC1434 /* AppDelegate.swift */,
 				CE35BBFB22FF07DA00DC1434 /* ViewController.swift */,
-				2AFAB5AE236063490053D56C /* SecondViewController.swift */,
 				CE35BBFD22FF07DA00DC1434 /* Main.storyboard */,
 				CE35BC0022FF07DC00DC1434 /* Assets.xcassets */,
 				CE35BC0222FF07DC00DC1434 /* LaunchScreen.storyboard */,
@@ -297,9 +264,9 @@
 		CE35BC0C22FF08DD00DC1434 /* StandardLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				2A73AA53236232FF00B4A88E /* SwiftyJSON.swift */,
 				2A2E2F64238ECF070017E592 /* Utils */,
 				2A8F22DE2362D9D800AC6937 /* MapKit */,
-				2A73AA52236232F000B4A88E /* SwiftyJSON */,
 				2AD8D2F323618DD500407310 /* Gesture */,
 				CEE85BAC233F7FCF007526E5 /* Media */,
 			);
@@ -408,7 +375,6 @@
 				2AD017D323755527000B03CA /* GoogleMap.storyboard in Resources */,
 				CE35BC0122FF07DC00DC1434 /* Assets.xcassets in Resources */,
 				CE35BBFF22FF07DA00DC1434 /* Main.storyboard in Resources */,
-				2A9D562623967E88005A9D44 /* ImageTracking.storyboard in Resources */,
 				2A8F22E02362DA4300AC6937 /* MapKit.storyboard in Resources */,
 				CEAA5240233E2E2100551546 /* play.png in Resources */,
 			);
@@ -444,12 +410,18 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Utilities-iOS/Pods-Utilities-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,12 +480,10 @@
 				2A8F22E22362DA5600AC6937 /* MapKitViewController.swift in Sources */,
 				CE01C98323019FD700C87440 /* Alamofire.swift in Sources */,
 				2A354FAD2360C1CA00CA14F1 /* Layout.swift in Sources */,
-				2AFAB5AF236063490053D56C /* SecondViewController.swift in Sources */,
 				CEAA5247233E5FC900551546 /* Subtitle.swift in Sources */,
 				CEAA5243233E38E000551546 /* Media.swift in Sources */,
 				CE35BBFA22FF07DA00DC1434 /* AppDelegate.swift in Sources */,
 				2A598BF72363912A008CE567 /* AlertEx.swift in Sources */,
-				2A9D562823967E99005A9D44 /* ImageTrackingViewController.swift in Sources */,
 				2AE87C0A237A894A003001DA /* Label.swift in Sources */,
 				2A8F22E42362DEE500AC6937 /* MapKitEx.swift in Sources */,
 			);

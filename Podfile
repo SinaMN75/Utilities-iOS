@@ -6,5 +6,7 @@ target 'Utilities-iOS' do
   pod 'SwiftLocation'
   pod 'IQKeyboardManagerSwift'
   pod 'GoogleMaps'
+  pod 'RxSwift'
+  pod 'RxCocoa'
   
 end
