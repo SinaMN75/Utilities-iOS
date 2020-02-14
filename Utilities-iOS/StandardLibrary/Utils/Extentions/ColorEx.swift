@@ -12,11 +12,11 @@ extension UIColor {
          Scanner(string: hex).scanHexInt64(&int)
          let a, r, g, b: UInt64
          switch hex.count {
-         case 3: // RGB (12-bit)
+         case 3:
              (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-         case 6: // RGB (24-bit)
+         case 6:
              (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-         case 8: // ARGB (32-bit)
+         case 8:
              (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
          default:
              (a, r, g, b) = (255, 0, 0, 0)
@@ -24,8 +24,6 @@ extension UIColor {
          self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
      }
     
-    
-    // MARK:- Creates a Random color.
     func random() -> UIColor {
         return UIColor(red:   .random(in: 0...255),
                        green: .random(in: 0...255),
@@ -36,20 +34,14 @@ extension UIColor {
 
 @available(iOS 13.0, *)
 extension Color {
-    
-    // MARK:- Converts Hex color to RGBA color.
     init(hex string: String) {
         var string: String = string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         if string.hasPrefix("#") { _ = string.removeFirst() }
-        
         if !string.count.isMultiple(of: 2), let last = string.last { string.append(last) }
-        
         if string.count > 8 { string = String(string.prefix(8))}
-        
         let scanner = Scanner(string: string)
         var color: UInt64 = 0
         scanner.scanHexInt64(&color)
-        
         if string.count == 2 {
             let mask = 0xFF
             let g = Int(color) & mask
@@ -82,8 +74,6 @@ extension Color {
             let blue = Double(b) / 255.0
             let alpha = Double(a) / 255.0
             self.init(.sRGB, red: red, green: green, blue: blue, opacity: alpha)
-        } else {
-            self.init(.sRGB, red: 1, green: 1, blue: 1, opacity: 1)
-        }
+        } else { self.init(.sRGB, red: 1, green: 1, blue: 1, opacity: 1) }
     }
 }

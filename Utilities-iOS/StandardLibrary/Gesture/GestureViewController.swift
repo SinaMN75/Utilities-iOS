@@ -1,4 +1,3 @@
-
 //  Created by Craig Grummitt on 22/04/2016.
 //  Copyright © 2016 Craig Grummitt. All rights reserved.
 
@@ -27,8 +26,7 @@ class GestureViewController: UIViewController, UIGestureRecognizerDelegate {
         sender.rotation = 0
     }
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
-                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
 }

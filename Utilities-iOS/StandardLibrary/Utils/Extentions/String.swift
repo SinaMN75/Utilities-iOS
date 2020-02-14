@@ -5,13 +5,10 @@ import UIKit
 
 extension String {
     
-    // MARK: Replace the first string with the second one.
     func replace(from target: String, to withString: String) -> String { return self.replacingOccurrences(of: target, with: withString) }
     
-    //MARK: Gets length of the Trimmed the String.
     func trimmedLength() -> Int { return self.trimmingCharacters(in: .whitespacesAndNewlines).count }
     
-    //MARK: Trims the String.
     func trim() -> String { return self.trimmingCharacters(in: .whitespacesAndNewlines) }
     
     func timeAgoFromNow() -> String {
@@ -30,7 +27,7 @@ extension String {
         return ""
     }
     
-    func shortPrice() -> String{
+    func asTomanPrice() -> String{
         var mainPrice = self
         var floatPrice = ""
         var suffix = ""
@@ -49,14 +46,13 @@ extension String {
             suffix = "میلیارد تومان"
             floatPrice = mainPrice[mainPrice.count - 9]
             mainPrice = String(mainPrice[..<mainPrice.index(mainPrice.endIndex, offsetBy: -9)])
-        default:
-            break
+        default: break
         }
         if floatPrice == "0" { return mainPrice + " " + suffix }
         return mainPrice + "/" + floatPrice + " " + suffix
     }
     
-    func persianNumberToEnglish() -> String{
+    func toEnglishNumber() -> String{
         var string = self
         let formatter = NumberFormatter()
         formatter.locale = NSLocale(localeIdentifier: "fa") as Locale
@@ -89,15 +85,26 @@ extension String {
     subscript (i: Int) -> Character { return self[index(startIndex, offsetBy: i)] }
     
     subscript (i: Int) -> String { return String(self[i] as Character) }
+    
+    func grgToSh() -> String {
+        var dateString = self
+        if dateString.count == 10 { dateString += " 00:00:00" }
+        if dateString.count > 19 { dateString = String(dateString.dropLast(dateString.count - 19)) }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let gerogorianDate = formatter.date(from: dateString)
+        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.calendar = Calendar(identifier: .persian)
+        if let date = gerogorianDate { return formatter.string(from: date) }
+        return ""
+    }
 }
 
 extension UITextField {
     
-    // MARK: - Returns trimmed string from UITextField.
-    func trimmedString() -> String { return self.text?.trim() ?? "" }
+    func trimmedText() -> String { return self.text?.trim() ?? "" }
     
-    // MARK: - Validates the text inside of the UITextField with it's length.
-    func validateInputByLength(length: Int) -> Bool {
+    func validateByLength(length: Int) -> Bool {
         if self.text?.trimmedLength() ?? 0 < length { return false }
         else { return true }
     }

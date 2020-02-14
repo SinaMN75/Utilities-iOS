@@ -11,6 +11,7 @@
 		2A354FAD2360C1CA00CA14F1 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A354FAC2360C1CA00CA14F1 /* Layout.swift */; };
 		2A354FAF2360CA8C00CA14F1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A354FAE2360CA8C00CA14F1 /* Data.swift */; };
 		2A598BF72363912A008CE567 /* AlertEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A598BF62363912A008CE567 /* AlertEx.swift */; };
+		2A6F097D23F46BD1006C09A9 /* RxSwiftBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6F097C23F46BD1006C09A9 /* RxSwiftBasic.swift */; };
 		2A73AA54236232FF00B4A88E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A73AA53236232FF00B4A88E /* SwiftyJSON.swift */; };
 		2A7D504A2360A8CF000D4275 /* ViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D50492360A8CF000D4275 /* ViewControllerEx.swift */; };
 		2A8F22DB2362CE9800AC6937 /* CoreMotionEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22DA2362CE9800AC6937 /* CoreMotionEx.swift */; };
@@ -19,6 +20,13 @@
 		2A8F22E22362DA5600AC6937 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */; };
 		2A8F22E42362DEE500AC6937 /* MapKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E32362DEE500AC6937 /* MapKitEx.swift */; };
 		2A8F22EA236350AD00AC6937 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E9236350AD00AC6937 /* NavigationViewController.swift */; };
+		2A99923B23F5317B003387BF /* System.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A99923A23F5317B003387BF /* System.storyboard */; };
+		2A99923D23F53189003387BF /* SystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99923C23F53189003387BF /* SystemViewController.swift */; };
+		2A99924123F567BB003387BF /* MZDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99924023F567BB003387BF /* MZDownloadManager.swift */; };
+		2A99924323F567E1003387BF /* MZDownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99924223F567E1003387BF /* MZDownloadModel.swift */; };
+		2A99924523F567FE003387BF /* MZUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99924423F567FE003387BF /* MZUtility.swift */; };
+		2A99924723F56833003387BF /* DownloadManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A99924623F56833003387BF /* DownloadManager.storyboard */; };
+		2A99924923F56848003387BF /* DownloadManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99924823F56848003387BF /* DownloadManagerViewController.swift */; };
 		2AD017D323755527000B03CA /* GoogleMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD017D223755527000B03CA /* GoogleMap.storyboard */; };
 		2AD017D523755534000B03CA /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD017D423755534000B03CA /* GoogleMapViewController.swift */; };
 		2AD8D2F0236185B600407310 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8D2EF236185B600407310 /* ColorEx.swift */; };
@@ -60,6 +68,7 @@
 		2A354FAC2360C1CA00CA14F1 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		2A354FAE2360CA8C00CA14F1 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2A598BF62363912A008CE567 /* AlertEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEx.swift; sourceTree = "<group>"; };
+		2A6F097C23F46BD1006C09A9 /* RxSwiftBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftBasic.swift; sourceTree = "<group>"; };
 		2A73AA51236217EC00B4A88E /* Utilities-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Utilities-iOS.entitlements"; sourceTree = "<group>"; };
 		2A73AA53236232FF00B4A88E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		2A7D50492360A8CF000D4275 /* ViewControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEx.swift; sourceTree = "<group>"; };
@@ -69,6 +78,13 @@
 		2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		2A8F22E32362DEE500AC6937 /* MapKitEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitEx.swift; sourceTree = "<group>"; };
 		2A8F22E9236350AD00AC6937 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		2A99923A23F5317B003387BF /* System.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = System.storyboard; sourceTree = "<group>"; };
+		2A99923C23F53189003387BF /* SystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewController.swift; sourceTree = "<group>"; };
+		2A99924023F567BB003387BF /* MZDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZDownloadManager.swift; sourceTree = "<group>"; };
+		2A99924223F567E1003387BF /* MZDownloadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZDownloadModel.swift; sourceTree = "<group>"; };
+		2A99924423F567FE003387BF /* MZUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZUtility.swift; sourceTree = "<group>"; };
+		2A99924623F56833003387BF /* DownloadManager.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DownloadManager.storyboard; sourceTree = "<group>"; };
+		2A99924823F56848003387BF /* DownloadManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManagerViewController.swift; sourceTree = "<group>"; };
 		2AD017D223755527000B03CA /* GoogleMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoogleMap.storyboard; sourceTree = "<group>"; };
 		2AD017D423755534000B03CA /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
 		2AD8D2EF236185B600407310 /* ColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEx.swift; sourceTree = "<group>"; };
@@ -138,6 +154,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		2A6F097A23F46ACE006C09A9 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				2A6F097C23F46BD1006C09A9 /* RxSwiftBasic.swift */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
 		2A8F22DE2362D9D800AC6937 /* MapKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +169,35 @@
 				2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */,
 			);
 			path = MapKit;
+			sourceTree = "<group>";
+		};
+		2A99923923F53163003387BF /* System */ = {
+			isa = PBXGroup;
+			children = (
+				2A99923A23F5317B003387BF /* System.storyboard */,
+				2A99923C23F53189003387BF /* SystemViewController.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		2A99923E23F56787003387BF /* DownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				2A99924623F56833003387BF /* DownloadManager.storyboard */,
+				2A99924823F56848003387BF /* DownloadManagerViewController.swift */,
+				2A99923F23F567A9003387BF /* MZDownloadManager */,
+			);
+			path = DownloadManager;
+			sourceTree = "<group>";
+		};
+		2A99923F23F567A9003387BF /* MZDownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				2A99924023F567BB003387BF /* MZDownloadManager.swift */,
+				2A99924223F567E1003387BF /* MZDownloadModel.swift */,
+				2A99924423F567FE003387BF /* MZUtility.swift */,
+			);
+			path = MZDownloadManager;
 			sourceTree = "<group>";
 		};
 		2AD017D02375550D000B03CA /* GoogleMap */ = {
@@ -254,6 +307,7 @@
 		CE35BC0B22FF08CE00DC1434 /* 3rdPartyLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				2A6F097A23F46ACE006C09A9 /* RxSwift */,
 				2AD017D02375550D000B03CA /* GoogleMap */,
 				CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */,
 				CE01C98223019FD700C87440 /* Alamofire.swift */,
@@ -264,6 +318,8 @@
 		CE35BC0C22FF08DD00DC1434 /* StandardLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				2A99923E23F56787003387BF /* DownloadManager */,
+				2A99923923F53163003387BF /* System */,
 				2A73AA53236232FF00B4A88E /* SwiftyJSON.swift */,
 				2A2E2F64238ECF070017E592 /* Utils */,
 				2A8F22DE2362D9D800AC6937 /* MapKit */,
@@ -369,8 +425,10 @@
 				CEAA5249233E625400551546 /* toyStory.srt in Resources */,
 				2AD8D2F723618E0C00407310 /* CradleMountain.JPG in Resources */,
 				2AD8D2F523618DF800407310 /* Gesture.storyboard in Resources */,
+				2A99924723F56833003387BF /* DownloadManager.storyboard in Resources */,
 				CEFDBA8A233D42780077E480 /* Media.storyboard in Resources */,
 				CE35BC0422FF07DC00DC1434 /* LaunchScreen.storyboard in Resources */,
+				2A99923B23F5317B003387BF /* System.storyboard in Resources */,
 				CEAA5241233E2E2100551546 /* pause.png in Resources */,
 				2AD017D323755527000B03CA /* GoogleMap.storyboard in Resources */,
 				CE35BC0122FF07DC00DC1434 /* Assets.xcassets in Resources */,
@@ -458,6 +516,10 @@
 				CE01C9872301A10A00C87440 /* General.swift in Sources */,
 				2A354FAF2360CA8C00CA14F1 /* Data.swift in Sources */,
 				2A8F22EA236350AD00AC6937 /* NavigationViewController.swift in Sources */,
+				2A99924523F567FE003387BF /* MZUtility.swift in Sources */,
+				2A99924323F567E1003387BF /* MZDownloadModel.swift in Sources */,
+				2A6F097D23F46BD1006C09A9 /* RxSwiftBasic.swift in Sources */,
+				2A99923D23F53189003387BF /* SystemViewController.swift in Sources */,
 				CE650637233E01E800D843C5 /* VideoPlayerViewController.swift in Sources */,
 				CE62AF38233E82C000F71489 /* AVKitViewController.swift in Sources */,
 				CEDF5C082301D19D007426D2 /* Device.swift in Sources */,
@@ -474,11 +536,13 @@
 				CEAA5245233E4D3000551546 /* Number.swift in Sources */,
 				CEDF5C002301C242007426D2 /* SwiftLocation.swift in Sources */,
 				CE35BBFC22FF07DA00DC1434 /* ViewController.swift in Sources */,
+				2A99924923F56848003387BF /* DownloadManagerViewController.swift in Sources */,
 				2AFAB5AD236055E60053D56C /* View.swift in Sources */,
 				2A73AA54236232FF00B4A88E /* SwiftyJSON.swift in Sources */,
 				2AFAB5B223607D110053D56C /* TextFieldCustom.swift in Sources */,
 				2A8F22E22362DA5600AC6937 /* MapKitViewController.swift in Sources */,
 				CE01C98323019FD700C87440 /* Alamofire.swift in Sources */,
+				2A99924123F567BB003387BF /* MZDownloadManager.swift in Sources */,
 				2A354FAD2360C1CA00CA14F1 /* Layout.swift in Sources */,
 				CEAA5247233E5FC900551546 /* Subtitle.swift in Sources */,
 				CEAA5243233E38E000551546 /* Media.swift in Sources */,
@@ -570,6 +634,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -625,6 +690,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

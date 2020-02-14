@@ -17,19 +17,6 @@ func isConnectedToNetwork() -> Bool {
     return ((flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0 && !needsConnection)
 }
 
-func grgToSh(gerogorianDateString:String) -> String {
-    var dateString = gerogorianDateString
-    if dateString.count == 10 { dateString += " 00:00:00" }
-    if dateString.count > 19 { dateString = String(dateString.dropLast(dateString.count - 19)) }
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-    let gerogorianDate = formatter.date(from: dateString)
-    formatter.dateFormat = "yyyy/MM/dd"
-    formatter.calendar = Calendar(identifier: .persian)
-    if let date = gerogorianDate { return formatter.string(from: date) }
-    return ""
-}
-
 func versionName() -> String { return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String }
 
 func versionCode() -> String { return Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String }
@@ -40,8 +27,12 @@ func versionBuild() -> String {
 }
 
 extension Array where Element: Equatable {
-
-    mutating func remove(object: Element) {
-        if let index = firstIndex(of: object) { remove(at: index) }
-    }
+    mutating func remove(object: Element) { if let index = firstIndex(of: object) { remove(at: index) } }
 }
+
+func mzDownloadManager(delegate: MZDownloadManagerDelegate) -> MZDownloadManager {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    return MZDownloadManager(session: "com.iosDevelopment.MZDownloadManager.BackgroundSession",
+                             delegate: delegate,
+                             completion: appDelegate.backgroundSessionCompletionHandler)
+    }

@@ -28,3 +28,10 @@ func deleteAll() {
 }
 
 let documentDirectory: URL = { return FileManager().urls(for: .documentDirectory , in: .userDomainMask).first! }()
+
+func ifFileExist(path: String) -> Bool {
+    if FileManager.default.fileExists(atPath: path) { return true }
+    else { return false }
+}
+
+func createDirectory(path: String) { try? FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil) }

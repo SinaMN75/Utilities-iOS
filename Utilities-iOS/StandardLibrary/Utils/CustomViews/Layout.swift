@@ -49,10 +49,10 @@ class ViewBorderRounded : UIView {
     override func prepareForInterfaceBuilder() { update() }
     override func awakeFromNib() { update() }
     private func update() {
-        setupCardView(corner: corner, withShadow: false)
         backgroundColor = backGroundColor
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth
+        layer.cornerRadius = corner
     }
 }
 
@@ -72,8 +72,8 @@ class ViewCardBorder : UIView {
     override func prepareForInterfaceBuilder() { update() }
     override func awakeFromNib() { update() }
     private func update() {
-        setupCardView(corner: corner, withShadow: false)
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = 1
+        layer.cornerRadius = corner
     }
 }

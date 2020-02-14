@@ -44,7 +44,5 @@ private func send(url:String,
                     }
                 }
         }
-    } else {
-        alert(title: "خطا", message: "ارتباط با اینترنت برقرار نیست", buttonTitle: "باشه")
-    }
+    } else { alert(title: "خطا", message: "ارتباط با اینترنت برقرار نیست", buttonTitle: "باشه") }
 }

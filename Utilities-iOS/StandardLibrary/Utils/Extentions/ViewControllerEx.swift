@@ -9,11 +9,7 @@ extension UIViewController {
     /**
      need to call  [ view.endEditing(true) ] at the end of action selector to close the keyboard.
      */
-    func setupInputAccesoryButton(textField: UITextField,
-                                  title: String = "OK",
-                                  backgroundColor: UIColor = .systemBlue,
-                                  titleColor: UIColor = .white,
-                                  action: Selector) {
+    func setupInputAccesoryButton(textField: UITextField, title: String, backgroundColor: UIColor, titleColor: UIColor, action: Selector) {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 60))
         button.backgroundColor = backgroundColor
         button.setTitle(title, for: .normal)
@@ -79,18 +75,9 @@ extension UIViewController {
         if !withShadow { navigationController?.navigationBar.shadowImage = UIImage() }
     }
     
-    func navigationBarImageTitle(image: String) {
-        let image = UIImageView(image: UIImage(named: image))
-        image.sizeToFit()
-        navigationItem.titleView = image
-    }
+    func navigationBarImageTitle(image: String) { navigationItem.titleView = imageView(image: image) }
     
-    func navigationBarTextTitle(title: String) {
-        let label = UILabel()
-        label.text = title
-        label.sizeToFit()
-        navigationItem.titleView = label
-    }
+    func navigationBarTextTitle(title: String) { navigationItem.titleView = label(text: title) }
     
     func backBarButton(title: String) { navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil) }
     
@@ -101,11 +88,7 @@ extension UIViewController {
     }
     
     func leftBarButtonItem(image: String, action: Selector) {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(named: image)?.withRenderingMode(.alwaysOriginal), for: .normal)
-        button.sizeToFit()
-        button.addTarget(self, action: action, for: .touchUpInside)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: imageButton(image: image, action: action))
     }
     
     func rightBarButtonItem(image: String, action: Selector) {
@@ -117,16 +100,16 @@ extension UIViewController {
     }
     
     func rightBarButtonItems(image1: String, image2: String, action1: Selector, action2: Selector) {
-        let button1 = self.makeImageButton(image: image1, action: action1)
-        let button2 = self.makeImageButton(image: image1, action: action2)
+        let button1 = imageButton(image: image1, action: action1)
+        let button2 = imageButton(image: image1, action: action2)
         button1.addTarget(self, action: action1, for: .touchUpInside)
         button2.addTarget(self, action: action2, for: .touchUpInside)
         self.navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: button1), UIBarButtonItem(customView: button2)]
     }
     
     func leftBarButtonItems(image1: String, image2: String, action1: Selector, action2: Selector) {
-        let button1 = self.makeImageButton(image: image1, action: action1)
-        let button2 = self.makeImageButton(image: image1, action: action2)
+        let button1 = imageButton(image: image1, action: action1)
+        let button2 = imageButton(image: image1, action: action2)
         button1.addTarget(self, action: action1, for: .touchUpInside)
         button2.addTarget(self, action: action2, for: .touchUpInside)
         self.navigationItem.leftBarButtonItems = [UIBarButtonItem(customView: button1), UIBarButtonItem(customView: button2)]
@@ -141,21 +124,11 @@ extension UIViewController {
     }
     
     func dismiss(animated: Bool = true) { self.dismiss(animated: animated, completion: nil) }
-    
-    func makeImageButton(image: String, action: Selector) -> UIButton{
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(named: image)?.withRenderingMode(.alwaysOriginal), for: .normal)
-        button.sizeToFit()
-        button.addTarget(self, action: action, for: .touchUpInside)
-        return button
-    }
 }
 
 func topVC() -> UIViewController {
     if var topController:UIViewController = UIApplication.shared.keyWindow?.rootViewController {
-        while let presentedViewController = topController.presentedViewController {
-            topController = presentedViewController
-        }
+        while let presentedViewController = topController.presentedViewController { topController = presentedViewController }
         return topController
     }
     return UIViewController()
