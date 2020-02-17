@@ -2,12 +2,13 @@
 //  Copyright © 2019 SinaMN75. All rights reserved.
 
 import UIKit
+import RxRelay
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var progressBar: ProgressBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        runRx()
     }
 }

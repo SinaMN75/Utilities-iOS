@@ -35,4 +35,4 @@ func mzDownloadManager(delegate: MZDownloadManagerDelegate) -> MZDownloadManager
     return MZDownloadManager(session: "com.iosDevelopment.MZDownloadManager.BackgroundSession",
                              delegate: delegate,
                              completion: appDelegate.backgroundSessionCompletionHandler)
-    }
+}

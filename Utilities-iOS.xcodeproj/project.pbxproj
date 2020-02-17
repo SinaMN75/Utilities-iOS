@@ -11,6 +11,13 @@
 		2A354FAD2360C1CA00CA14F1 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A354FAC2360C1CA00CA14F1 /* Layout.swift */; };
 		2A354FAF2360CA8C00CA14F1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A354FAE2360CA8C00CA14F1 /* Data.swift */; };
 		2A598BF72363912A008CE567 /* AlertEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A598BF62363912A008CE567 /* AlertEx.swift */; };
+		2A652D8623F7D487008D9DE0 /* RPCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A652D8523F7D487008D9DE0 /* RPCircularProgress.swift */; };
+		2A652D9E23F7FD64008D9DE0 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A652D9D23F7FD64008D9DE0 /* ProgressBar.swift */; };
+		2A652DA023F7FD78008D9DE0 /* ProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A652D9F23F7FD78008D9DE0 /* ProgressBar.xib */; };
+		2A652DA923F81436008D9DE0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A652DA823F81436008D9DE0 /* Settings.bundle */; };
+		2A652DAB23F8172C008D9DE0 /* SettingBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A652DAA23F8172C008D9DE0 /* SettingBundleHelper.swift */; };
+		2A652DB323F95321008D9DE0 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A652DB223F95321008D9DE0 /* stop.png */; };
+		2A652DB923F9546A008D9DE0 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A652DB823F9546A008D9DE0 /* download.png */; };
 		2A6F097D23F46BD1006C09A9 /* RxSwiftBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6F097C23F46BD1006C09A9 /* RxSwiftBasic.swift */; };
 		2A73AA54236232FF00B4A88E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A73AA53236232FF00B4A88E /* SwiftyJSON.swift */; };
 		2A7D504A2360A8CF000D4275 /* ViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D50492360A8CF000D4275 /* ViewControllerEx.swift */; };
@@ -68,6 +75,13 @@
 		2A354FAC2360C1CA00CA14F1 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		2A354FAE2360CA8C00CA14F1 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2A598BF62363912A008CE567 /* AlertEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEx.swift; sourceTree = "<group>"; };
+		2A652D8523F7D487008D9DE0 /* RPCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPCircularProgress.swift; sourceTree = "<group>"; };
+		2A652D9D23F7FD64008D9DE0 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		2A652D9F23F7FD78008D9DE0 /* ProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressBar.xib; sourceTree = "<group>"; };
+		2A652DA823F81436008D9DE0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		2A652DAA23F8172C008D9DE0 /* SettingBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBundleHelper.swift; sourceTree = "<group>"; };
+		2A652DB223F95321008D9DE0 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		2A652DB823F9546A008D9DE0 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
 		2A6F097C23F46BD1006C09A9 /* RxSwiftBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftBasic.swift; sourceTree = "<group>"; };
 		2A73AA51236217EC00B4A88E /* Utilities-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Utilities-iOS.entitlements"; sourceTree = "<group>"; };
 		2A73AA53236232FF00B4A88E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -150,8 +164,21 @@
 			children = (
 				2AECAF5923DEE65900B699EA /* Strings.swift */,
 				2A2E2F68238EE5B90017E592 /* Constant.swift */,
+				2A652DA823F81436008D9DE0 /* Settings.bundle */,
+				2A652DAA23F8172C008D9DE0 /* SettingBundleHelper.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		2A652D9C23F7FD45008D9DE0 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				2A652DB223F95321008D9DE0 /* stop.png */,
+				2A652DB823F9546A008D9DE0 /* download.png */,
+				2A652D9D23F7FD64008D9DE0 /* ProgressBar.swift */,
+				2A652D9F23F7FD78008D9DE0 /* ProgressBar.xib */,
+			);
+			path = ProgressBar;
 			sourceTree = "<group>";
 		};
 		2A6F097A23F46ACE006C09A9 /* RxSwift */ = {
@@ -222,6 +249,8 @@
 		2AFAB5B023607CF10053D56C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				2A652D9C23F7FD45008D9DE0 /* ProgressBar */,
+				2A652D8523F7D487008D9DE0 /* RPCircularProgress.swift */,
 				2AE87C09237A894A003001DA /* Label.swift */,
 				2AFAB5B123607D110053D56C /* TextFieldCustom.swift */,
 				2A354FAC2360C1CA00CA14F1 /* Layout.swift */,
@@ -423,17 +452,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEAA5249233E625400551546 /* toyStory.srt in Resources */,
+				2A652DB323F95321008D9DE0 /* stop.png in Resources */,
 				2AD8D2F723618E0C00407310 /* CradleMountain.JPG in Resources */,
 				2AD8D2F523618DF800407310 /* Gesture.storyboard in Resources */,
 				2A99924723F56833003387BF /* DownloadManager.storyboard in Resources */,
 				CEFDBA8A233D42780077E480 /* Media.storyboard in Resources */,
 				CE35BC0422FF07DC00DC1434 /* LaunchScreen.storyboard in Resources */,
 				2A99923B23F5317B003387BF /* System.storyboard in Resources */,
+				2A652DA923F81436008D9DE0 /* Settings.bundle in Resources */,
 				CEAA5241233E2E2100551546 /* pause.png in Resources */,
+				2A652DB923F9546A008D9DE0 /* download.png in Resources */,
 				2AD017D323755527000B03CA /* GoogleMap.storyboard in Resources */,
 				CE35BC0122FF07DC00DC1434 /* Assets.xcassets in Resources */,
 				CE35BBFF22FF07DA00DC1434 /* Main.storyboard in Resources */,
 				2A8F22E02362DA4300AC6937 /* MapKit.storyboard in Resources */,
+				2A652DA023F7FD78008D9DE0 /* ProgressBar.xib in Resources */,
 				CEAA5240233E2E2100551546 /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A7D504A2360A8CF000D4275 /* ViewControllerEx.swift in Sources */,
+				2A652DAB23F8172C008D9DE0 /* SettingBundleHelper.swift in Sources */,
 				CE01C9872301A10A00C87440 /* General.swift in Sources */,
 				2A354FAF2360CA8C00CA14F1 /* Data.swift in Sources */,
 				2A8F22EA236350AD00AC6937 /* NavigationViewController.swift in Sources */,
@@ -535,6 +569,7 @@
 				CEFDBA88233D417A0077E480 /* AudioPlayerViewController.swift in Sources */,
 				CEAA5245233E4D3000551546 /* Number.swift in Sources */,
 				CEDF5C002301C242007426D2 /* SwiftLocation.swift in Sources */,
+				2A652D8623F7D487008D9DE0 /* RPCircularProgress.swift in Sources */,
 				CE35BBFC22FF07DA00DC1434 /* ViewController.swift in Sources */,
 				2A99924923F56848003387BF /* DownloadManagerViewController.swift in Sources */,
 				2AFAB5AD236055E60053D56C /* View.swift in Sources */,
@@ -549,6 +584,7 @@
 				CE35BBFA22FF07DA00DC1434 /* AppDelegate.swift in Sources */,
 				2A598BF72363912A008CE567 /* AlertEx.swift in Sources */,
 				2AE87C0A237A894A003001DA /* Label.swift in Sources */,
+				2A652D9E23F7FD64008D9DE0 /* ProgressBar.swift in Sources */,
 				2A8F22E42362DEE500AC6937 /* MapKitEx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,6 +2,14 @@
 //  Copyright © 2020 SinaMN75. All rights reserved.
 
 import UIKit
+
+func downloadManager(delegate: MZDownloadManagerDelegate) -> MZDownloadManager {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    return MZDownloadManager(session: "com.iosDevelopment.MZDownloadManager.BackgroundSession",
+                             delegate: delegate,
+                             completion: appDelegate.backgroundSessionCompletionHandler)
+}
+
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     switch (lhs, rhs) {
     case let (l?, r?):
