@@ -27,7 +27,12 @@ func versionBuild() -> String {
 }
 
 extension Array where Element: Equatable {
-    mutating func remove(object: Element) { if let index = firstIndex(of: object) { remove(at: index) } }
+    mutating func remove(object: Element) -> Int {
+        if let index = firstIndex(of: object) {
+            remove(at: index)
+            return index
+        } else { return -1 }
+    }
 }
 
 func mzDownloadManager(delegate: MZDownloadManagerDelegate) -> MZDownloadManager {

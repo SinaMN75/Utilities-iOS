@@ -98,6 +98,22 @@ extension String {
         if let date = gerogorianDate { return formatter.string(from: date) }
         return ""
     }
+    
+    func toJSON() -> Any? {
+        guard let data = self.data(using: .utf8, allowLossyConversion: false) else { return nil }
+        return try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+    }
+    
+    var parseJSONString: AnyObject? {
+
+        let data = self.data(using: String.Encoding.utf8, allowLossyConversion: false)
+
+        if let jsonData = data {
+            return try? JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+        } else {
+            return nil
+        }
+    }
 }
 
 extension UITextField {

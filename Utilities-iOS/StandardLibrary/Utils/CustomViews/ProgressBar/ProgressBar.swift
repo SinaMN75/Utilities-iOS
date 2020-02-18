@@ -2,7 +2,6 @@
 //  Copyright © 2020 SinaMN75. All rights reserved.
 
 import UIKit
-import RxRelay
 
 class ProgressBar : UIView {
     

@@ -2,7 +2,6 @@
 //  Copyright © 2019 SinaMN75. All rights reserved.
 
 import UIKit
-import RxRelay
 
 class ViewController: UIViewController {
     

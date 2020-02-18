@@ -1,127 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QAo-O5-vu4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="58U-nA-hFj">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pdf Reader View Controller-->
-        <scene sceneID="QS6-Yh-plU">
-            <objects>
-                <viewController id="QAo-O5-vu4" customClass="PdfReaderViewController" customModule="Utilities_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eAt-hi-K23">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KfS-lA-W8z" customClass="PDFView">
-                                <rect key="frame" x="0.0" y="99" width="768" height="715"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DR2-7C-nwF">
-                                <rect key="frame" x="0.0" y="84" width="129" height="940"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="s8G-uB-je2">
-                                    <size key="itemSize" width="121" height="151"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellPdfPage" id="Ddt-I4-y4G" customClass="PdfPageCell" customModule="Utilities_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="4" y="0.0" width="121" height="151"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mfq-67-ezF">
-                                            <rect key="frame" x="0.0" y="0.0" width="121" height="151"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cAW-nH-4m0">
-                                                    <rect key="frame" x="8" y="8" width="105" height="135"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="cAW-nH-4m0" secondAttribute="bottom" constant="8" id="blF-MA-ZLL"/>
-                                                <constraint firstAttribute="trailing" secondItem="cAW-nH-4m0" secondAttribute="trailing" constant="8" id="fRJ-hS-yIy"/>
-                                                <constraint firstItem="cAW-nH-4m0" firstAttribute="top" secondItem="mfq-67-ezF" secondAttribute="top" constant="8" id="gmz-wQ-ZJn"/>
-                                                <constraint firstItem="cAW-nH-4m0" firstAttribute="leading" secondItem="mfq-67-ezF" secondAttribute="leading" constant="8" id="hrT-Gd-0Py"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="121" height="151"/>
-                                        <connections>
-                                            <outlet property="imageView" destination="cAW-nH-4m0" id="Zb4-5Z-c4S"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KOU-Jq-s17">
-                                <rect key="frame" x="0.0" y="50" width="768" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ikT-aH-ExQ">
-                                    <size key="itemSize" width="184" height="32"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellPdf" id="Ouf-7v-37d" customClass="PdfListCell" customModule="Utilities_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1.5" width="184" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pUR-eF-lqc">
-                                            <rect key="frame" x="0.0" y="0.0" width="184" height="32"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="File Open 1.PDF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRI-jw-R13">
-                                                    <rect key="frame" x="6" y="6" width="137" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4w3-F5-aHD">
-                                                    <rect key="frame" x="143" y="4" width="23" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="close_dark"/>
-                                                    <connections>
-                                                        <action selector="buttonCloseAction:" destination="Ouf-7v-37d" eventType="touchUpInside" id="enH-Z1-k5e"/>
-                                                    </connections>
-                                                </button>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDr-m1-V5C">
-                                                    <rect key="frame" x="178" y="4" width="1" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                </view>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="184" height="32"/>
-                                        <connections>
-                                            <outlet property="buttonClose" destination="4w3-F5-aHD" id="IOn-Ku-ymj"/>
-                                            <outlet property="buttonCloseAction" destination="4w3-F5-aHD" id="cyL-VY-UU6"/>
-                                            <outlet property="labelTitle" destination="HRI-jw-R13" id="3MK-fA-TYc"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="NKE-XY-H75"/>
-                    </view>
-                    <connections>
-                        <outlet property="collectionViewPages" destination="DR2-7C-nwF" id="aNX-h7-Z30"/>
-                        <outlet property="collectionViewPdf" destination="KOU-Jq-s17" id="qLr-l2-PBo"/>
-                        <outlet property="pdfView" destination="KfS-lA-W8z" id="fIq-on-zpQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6kl-vH-X4g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-981.25" y="-9.375"/>
-        </scene>
         <!--Audio Player View Controller-->
         <scene sceneID="1v8-Yq-dX1">
             <objects>
@@ -311,7 +197,6 @@
     </scenes>
     <resources>
         <image name="backward.fill" catalog="system" width="64" height="38"/>
-        <image name="close_dark" width="51" height="51"/>
         <image name="forward.fill" catalog="system" width="64" height="38"/>
         <image name="pause.png" width="96" height="96"/>
         <image name="play.fill" catalog="system" width="58" height="64"/>
