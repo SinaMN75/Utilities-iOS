@@ -7,7 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0F4D4D24572CE200C8B3DD /* RangeSeekSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F4D4A24572CE200C8B3DD /* RangeSeekSliderDelegate.swift */; };
+		2A0F4D4E24572CE200C8B3DD /* RangeSeekSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F4D4B24572CE200C8B3DD /* RangeSeekSlider.swift */; };
+		2A0F4D4F24572CE200C8B3DD /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F4D4C24572CE200C8B3DD /* TapticEngine.swift */; };
+		2A0F4D5924572CF200C8B3DD /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F4D5124572CF200C8B3DD /* CustomView.swift */; };
+		2A0F4D5A24572CF200C8B3DD /* PersianDateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F4D5224572CF200C8B3DD /* PersianDateDataSource.swift */; };
+		2A0F4D5B24572CF200C8B3DD /* Shadowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F4D5324572CF200C8B3DD /* Shadowable.swift */; };
+		2A0F4D5C24572CF200C8B3DD /* PersianDatePickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F4D5424572CF200C8B3DD /* PersianDatePickerPresenter.swift */; };
+		2A0F4D5D24572CF200C8B3DD /* PersianPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0F4D5524572CF200C8B3DD /* PersianPickerView.xib */; };
+		2A0F4D5E24572CF200C8B3DD /* PersianDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F4D5624572CF200C8B3DD /* PersianDatePickerView.swift */; };
+		2A0F4D5F24572CF200C8B3DD /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F4D5724572CF200C8B3DD /* ShadowView.swift */; };
+		2A0F4D6024572CF200C8B3DD /* PersianPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F4D5824572CF200C8B3DD /* PersianPickerView.swift */; };
 		2A2E2F69238EE5B90017E592 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2E2F68238EE5B90017E592 /* Constant.swift */; };
+		2A31EEDF23FD18540074E5CA /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A31EEDE23FD18540074E5CA /* FileManager.swift */; };
 		2A354FAD2360C1CA00CA14F1 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A354FAC2360C1CA00CA14F1 /* Layout.swift */; };
 		2A354FAF2360CA8C00CA14F1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A354FAE2360CA8C00CA14F1 /* Data.swift */; };
 		2A598BF72363912A008CE567 /* AlertEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A598BF62363912A008CE567 /* AlertEx.swift */; };
@@ -19,6 +31,7 @@
 		2A652DB323F95321008D9DE0 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A652DB223F95321008D9DE0 /* stop.png */; };
 		2A652DB923F9546A008D9DE0 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A652DB823F9546A008D9DE0 /* download.png */; };
 		2A73AA54236232FF00B4A88E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A73AA53236232FF00B4A88E /* SwiftyJSON.swift */; };
+		2A7A8A0E240160C500A69EE7 /* TitleAndValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7A8A0D240160C500A69EE7 /* TitleAndValue.swift */; };
 		2A7D504A2360A8CF000D4275 /* ViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D50492360A8CF000D4275 /* ViewControllerEx.swift */; };
 		2A7E19F623FB05B200A29F9E /* SumTextInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E19E923FB05B100A29F9E /* SumTextInputFormatter.swift */; };
 		2A7E19F723FB05B200A29F9E /* SumTextInputFormatterCaretPositionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E19EA23FB05B100A29F9E /* SumTextInputFormatterCaretPositionCalculator.swift */; };
@@ -43,26 +56,23 @@
 		2A7E1A3923FB109700A29F9E /* CheckboxLineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E1A2C23FB109700A29F9E /* CheckboxLineStyle.swift */; };
 		2A7E1A3A23FB109700A29F9E /* RadioCheckboxBaseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E1A2E23FB109700A29F9E /* RadioCheckboxBaseContainer.swift */; };
 		2A7E1A3B23FB109700A29F9E /* RadioCheckboxBaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E1A2F23FB109700A29F9E /* RadioCheckboxBaseButton.swift */; };
-		2A7E1A3D23FB1AF500A29F9E /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E1A3C23FB1AF500A29F9E /* ImageView.swift */; };
 		2A8F22DB2362CE9800AC6937 /* CoreMotionEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22DA2362CE9800AC6937 /* CoreMotionEx.swift */; };
 		2A8F22E02362DA4300AC6937 /* MapKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F22DF2362DA4300AC6937 /* MapKit.storyboard */; };
 		2A8F22E22362DA5600AC6937 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */; };
 		2A8F22E42362DEE500AC6937 /* MapKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E32362DEE500AC6937 /* MapKitEx.swift */; };
 		2A8F22EA236350AD00AC6937 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F22E9236350AD00AC6937 /* NavigationViewController.swift */; };
-		2A99923B23F5317B003387BF /* System.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A99923A23F5317B003387BF /* System.storyboard */; };
-		2A99923D23F53189003387BF /* SystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99923C23F53189003387BF /* SystemViewController.swift */; };
 		2A99924123F567BB003387BF /* MZDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99924023F567BB003387BF /* MZDownloadManager.swift */; };
 		2A99924323F567E1003387BF /* MZDownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99924223F567E1003387BF /* MZDownloadModel.swift */; };
 		2A99924523F567FE003387BF /* MZUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99924423F567FE003387BF /* MZUtility.swift */; };
 		2A99924723F56833003387BF /* DownloadManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A99924623F56833003387BF /* DownloadManager.storyboard */; };
 		2A99924923F56848003387BF /* DownloadManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99924823F56848003387BF /* DownloadManagerViewController.swift */; };
 		2AB5E26323FA7A7F0052DE81 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8F22DC2362D9A600AC6937 /* MapKit.framework */; platformFilter = ios; };
-		2AB5E26623FA7A830052DE81 /* Pods_Utilities_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73865062C7987936BFB03C1D /* Pods_Utilities_iOS.framework */; };
 		2AB5E26723FA7A830052DE81 /* Pods_Utilities_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73865062C7987936BFB03C1D /* Pods_Utilities_iOS.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AB5E27523FA7B8F0052DE81 /* Pods_Utilities_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73865062C7987936BFB03C1D /* Pods_Utilities_iOS.framework */; };
 		2AB5E28023FA8C200052DE81 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5E27F23FA8C200052DE81 /* File.swift */; };
 		2AD017D323755527000B03CA /* GoogleMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD017D223755527000B03CA /* GoogleMap.storyboard */; };
 		2AD017D523755534000B03CA /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD017D423755534000B03CA /* GoogleMapViewController.swift */; };
+		2AD49EEE23FD622700F81EA4 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD49EED23FD622700F81EA4 /* Routes.swift */; };
 		2AD8D2F0236185B600407310 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8D2EF236185B600407310 /* ColorEx.swift */; };
 		2AD8D2F523618DF800407310 /* Gesture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD8D2F423618DF800407310 /* Gesture.storyboard */; };
 		2AD8D2F723618E0C00407310 /* CradleMountain.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2AD8D2F623618E0C00407310 /* CradleMountain.JPG */; };
@@ -112,7 +122,19 @@
 
 /* Begin PBXFileReference section */
 		1EBD14DC1D7DD13A87D28C84 /* Pods-Utilities-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utilities-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Utilities-iOS/Pods-Utilities-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		2A0F4D4A24572CE200C8B3DD /* RangeSeekSliderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSeekSliderDelegate.swift; sourceTree = "<group>"; };
+		2A0F4D4B24572CE200C8B3DD /* RangeSeekSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSeekSlider.swift; sourceTree = "<group>"; };
+		2A0F4D4C24572CE200C8B3DD /* TapticEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapticEngine.swift; sourceTree = "<group>"; };
+		2A0F4D5124572CF200C8B3DD /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		2A0F4D5224572CF200C8B3DD /* PersianDateDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersianDateDataSource.swift; sourceTree = "<group>"; };
+		2A0F4D5324572CF200C8B3DD /* Shadowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadowable.swift; sourceTree = "<group>"; };
+		2A0F4D5424572CF200C8B3DD /* PersianDatePickerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersianDatePickerPresenter.swift; sourceTree = "<group>"; };
+		2A0F4D5524572CF200C8B3DD /* PersianPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersianPickerView.xib; sourceTree = "<group>"; };
+		2A0F4D5624572CF200C8B3DD /* PersianDatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersianDatePickerView.swift; sourceTree = "<group>"; };
+		2A0F4D5724572CF200C8B3DD /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		2A0F4D5824572CF200C8B3DD /* PersianPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersianPickerView.swift; sourceTree = "<group>"; };
 		2A2E2F68238EE5B90017E592 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		2A31EEDE23FD18540074E5CA /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		2A354FAC2360C1CA00CA14F1 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		2A354FAE2360CA8C00CA14F1 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2A37B95323FA772700BBC921 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +149,7 @@
 		2A652DB823F9546A008D9DE0 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
 		2A73AA51236217EC00B4A88E /* Utilities-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Utilities-iOS.entitlements"; sourceTree = "<group>"; };
 		2A73AA53236232FF00B4A88E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		2A7A8A0D240160C500A69EE7 /* TitleAndValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndValue.swift; sourceTree = "<group>"; };
 		2A7D50492360A8CF000D4275 /* ViewControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEx.swift; sourceTree = "<group>"; };
 		2A7E19E923FB05B100A29F9E /* SumTextInputFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumTextInputFormatter.swift; sourceTree = "<group>"; };
 		2A7E19EA23FB05B100A29F9E /* SumTextInputFormatterCaretPositionCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumTextInputFormatterCaretPositionCalculator.swift; sourceTree = "<group>"; };
@@ -151,15 +174,12 @@
 		2A7E1A2C23FB109700A29F9E /* CheckboxLineStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxLineStyle.swift; sourceTree = "<group>"; };
 		2A7E1A2E23FB109700A29F9E /* RadioCheckboxBaseContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioCheckboxBaseContainer.swift; sourceTree = "<group>"; };
 		2A7E1A2F23FB109700A29F9E /* RadioCheckboxBaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioCheckboxBaseButton.swift; sourceTree = "<group>"; };
-		2A7E1A3C23FB1AF500A29F9E /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		2A8F22DA2362CE9800AC6937 /* CoreMotionEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionEx.swift; sourceTree = "<group>"; };
 		2A8F22DC2362D9A600AC6937 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2A8F22DF2362DA4300AC6937 /* MapKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapKit.storyboard; sourceTree = "<group>"; };
 		2A8F22E12362DA5600AC6937 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		2A8F22E32362DEE500AC6937 /* MapKitEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitEx.swift; sourceTree = "<group>"; };
 		2A8F22E9236350AD00AC6937 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		2A99923A23F5317B003387BF /* System.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = System.storyboard; sourceTree = "<group>"; };
-		2A99923C23F53189003387BF /* SystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewController.swift; sourceTree = "<group>"; };
 		2A99924023F567BB003387BF /* MZDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZDownloadManager.swift; sourceTree = "<group>"; };
 		2A99924223F567E1003387BF /* MZDownloadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZDownloadModel.swift; sourceTree = "<group>"; };
 		2A99924423F567FE003387BF /* MZUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZUtility.swift; sourceTree = "<group>"; };
@@ -175,6 +195,7 @@
 		2AB5E27F23FA8C200052DE81 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		2AD017D223755527000B03CA /* GoogleMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoogleMap.storyboard; sourceTree = "<group>"; };
 		2AD017D423755534000B03CA /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
+		2AD49EED23FD622700F81EA4 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		2AD8D2EF236185B600407310 /* ColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEx.swift; sourceTree = "<group>"; };
 		2AD8D2F423618DF800407310 /* Gesture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gesture.storyboard; sourceTree = "<group>"; };
 		2AD8D2F623618E0C00407310 /* CradleMountain.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CradleMountain.JPG; sourceTree = "<group>"; };
@@ -219,16 +240,41 @@
 			files = (
 				2AB5E26323FA7A7F0052DE81 /* MapKit.framework in Frameworks */,
 				2AB5E27523FA7B8F0052DE81 /* Pods_Utilities_iOS.framework in Frameworks */,
-				2AB5E26623FA7A830052DE81 /* Pods_Utilities_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A0F4D4924572CE200C8B3DD /* RangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				2A0F4D4A24572CE200C8B3DD /* RangeSeekSliderDelegate.swift */,
+				2A0F4D4B24572CE200C8B3DD /* RangeSeekSlider.swift */,
+				2A0F4D4C24572CE200C8B3DD /* TapticEngine.swift */,
+			);
+			path = RangeSlider;
+			sourceTree = "<group>";
+		};
+		2A0F4D5024572CF200C8B3DD /* PersianDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				2A0F4D5124572CF200C8B3DD /* CustomView.swift */,
+				2A0F4D5224572CF200C8B3DD /* PersianDateDataSource.swift */,
+				2A0F4D5324572CF200C8B3DD /* Shadowable.swift */,
+				2A0F4D5424572CF200C8B3DD /* PersianDatePickerPresenter.swift */,
+				2A0F4D5524572CF200C8B3DD /* PersianPickerView.xib */,
+				2A0F4D5624572CF200C8B3DD /* PersianDatePickerView.swift */,
+				2A0F4D5724572CF200C8B3DD /* ShadowView.swift */,
+				2A0F4D5824572CF200C8B3DD /* PersianPickerView.swift */,
+			);
+			path = PersianDatePicker;
+			sourceTree = "<group>";
+		};
 		2A2E2F64238ECF070017E592 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2A99923F23F567A9003387BF /* DownloadManager */,
 				2AFAB5B023607CF10053D56C /* CustomViews */,
 				CE01C9842301A0E600C87440 /* Extentions */,
 			);
@@ -366,33 +412,23 @@
 			path = MapKit;
 			sourceTree = "<group>";
 		};
-		2A99923923F53163003387BF /* System */ = {
-			isa = PBXGroup;
-			children = (
-				2A99923A23F5317B003387BF /* System.storyboard */,
-				2A99923C23F53189003387BF /* SystemViewController.swift */,
-			);
-			path = System;
-			sourceTree = "<group>";
-		};
 		2A99923E23F56787003387BF /* DownloadManager */ = {
 			isa = PBXGroup;
 			children = (
 				2A99924623F56833003387BF /* DownloadManager.storyboard */,
 				2A99924823F56848003387BF /* DownloadManagerViewController.swift */,
-				2A99923F23F567A9003387BF /* MZDownloadManager */,
 			);
 			path = DownloadManager;
 			sourceTree = "<group>";
 		};
-		2A99923F23F567A9003387BF /* MZDownloadManager */ = {
+		2A99923F23F567A9003387BF /* DownloadManager */ = {
 			isa = PBXGroup;
 			children = (
 				2A99924023F567BB003387BF /* MZDownloadManager.swift */,
 				2A99924223F567E1003387BF /* MZDownloadModel.swift */,
 				2A99924423F567FE003387BF /* MZUtility.swift */,
 			);
-			path = MZDownloadManager;
+			path = DownloadManager;
 			sourceTree = "<group>";
 		};
 		2AD017D02375550D000B03CA /* GoogleMap */ = {
@@ -402,6 +438,15 @@
 				2AD017D423755534000B03CA /* GoogleMapViewController.swift */,
 			);
 			path = GoogleMap;
+			sourceTree = "<group>";
+		};
+		2AD49EEC23FD620A00F81EA4 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				CE01C98223019FD700C87440 /* Alamofire.swift */,
+				2AD49EED23FD622700F81EA4 /* Routes.swift */,
+			);
+			path = Http;
 			sourceTree = "<group>";
 		};
 		2AD8D2F323618DD500407310 /* Gesture */ = {
@@ -426,6 +471,8 @@
 		2AFAB5B023607CF10053D56C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				2A0F4D5024572CF200C8B3DD /* PersianDatePicker */,
+				2A0F4D4924572CE200C8B3DD /* RangeSlider */,
 				2A7E1A2023FB109700A29F9E /* RadioCheckboxButton */,
 				2A7E19E623FB05B100A29F9E /* AnyFormatKit */,
 				2A652D9C23F7FD45008D9DE0 /* ProgressBar */,
@@ -435,7 +482,7 @@
 				2A354FAC2360C1CA00CA14F1 /* Layout.swift */,
 				2A8F22E9236350AD00AC6937 /* NavigationViewController.swift */,
 				2A7E1A0023FB06CE00A29F9E /* Button.swift */,
-				2A7E1A3C23FB1AF500A29F9E /* ImageView.swift */,
+				2A7A8A0D240160C500A69EE7 /* TitleAndValue.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -470,6 +517,7 @@
 		CE01C9842301A0E600C87440 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				2A31EEDE23FD18540074E5CA /* FileManager.swift */,
 				CE01C9862301A10A00C87440 /* General.swift */,
 				CEDF5C072301D19D007426D2 /* Device.swift */,
 				CE35BC0D22FF08F400DC1434 /* String.swift */,
@@ -527,9 +575,9 @@
 		CE35BC0B22FF08CE00DC1434 /* 3rdPartyLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				2AD49EEC23FD620A00F81EA4 /* Http */,
 				2AD017D02375550D000B03CA /* GoogleMap */,
 				CEDF5BFF2301C242007426D2 /* SwiftLocation.swift */,
-				CE01C98223019FD700C87440 /* Alamofire.swift */,
 			);
 			path = 3rdPartyLibrary;
 			sourceTree = "<group>";
@@ -538,7 +586,6 @@
 			isa = PBXGroup;
 			children = (
 				2A99923E23F56787003387BF /* DownloadManager */,
-				2A99923923F53163003387BF /* System */,
 				2A73AA53236232FF00B4A88E /* SwiftyJSON.swift */,
 				2A2E2F64238ECF070017E592 /* Utils */,
 				2A8F22DE2362D9D800AC6937 /* MapKit */,
@@ -610,7 +657,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = SinaMN75;
 				TargetAttributes = {
 					CE35BBF522FF07DA00DC1434 = {
@@ -647,10 +694,10 @@
 				2AD8D2F723618E0C00407310 /* CradleMountain.JPG in Resources */,
 				2AD8D2F523618DF800407310 /* Gesture.storyboard in Resources */,
 				2AE5D1E823FBAE7500A93243 /* PdfReader.storyboard in Resources */,
+				2A0F4D5D24572CF200C8B3DD /* PersianPickerView.xib in Resources */,
 				2A99924723F56833003387BF /* DownloadManager.storyboard in Resources */,
 				CEFDBA8A233D42780077E480 /* Media.storyboard in Resources */,
 				CE35BC0422FF07DC00DC1434 /* LaunchScreen.storyboard in Resources */,
-				2A99923B23F5317B003387BF /* System.storyboard in Resources */,
 				2A652DA923F81436008D9DE0 /* Settings.bundle in Resources */,
 				CEAA5241233E2E2100551546 /* pause.png in Resources */,
 				2A652DB923F9546A008D9DE0 /* download.png in Resources */,
@@ -732,10 +779,11 @@
 				2A354FAF2360CA8C00CA14F1 /* Data.swift in Sources */,
 				2A8F22EA236350AD00AC6937 /* NavigationViewController.swift in Sources */,
 				2A7E1A3823FB109700A29F9E /* CheckboxButtonContainer.swift in Sources */,
+				2A0F4D5A24572CF200C8B3DD /* PersianDateDataSource.swift in Sources */,
 				2A99924523F567FE003387BF /* MZUtility.swift in Sources */,
+				2A7A8A0E240160C500A69EE7 /* TitleAndValue.swift in Sources */,
 				2A99924323F567E1003387BF /* MZDownloadModel.swift in Sources */,
 				2A7E1A3B23FB109700A29F9E /* RadioCheckboxBaseButton.swift in Sources */,
-				2A99923D23F53189003387BF /* SystemViewController.swift in Sources */,
 				2A7E19F923FB05B200A29F9E /* SumFormatParser.swift in Sources */,
 				CE650637233E01E800D843C5 /* VideoPlayerViewController.swift in Sources */,
 				2A7E1A3023FB109700A29F9E /* RadioButtonContainer.swift in Sources */,
@@ -745,21 +793,28 @@
 				2A7E19FB23FB05B200A29F9E /* CaretPositionCorrector.swift in Sources */,
 				2A7E1A3323FB109700A29F9E /* RadioButtonCircleStyle.swift in Sources */,
 				2AD017D523755534000B03CA /* GoogleMapViewController.swift in Sources */,
+				2A0F4D5B24572CF200C8B3DD /* Shadowable.swift in Sources */,
 				2A2E2F69238EE5B90017E592 /* Constant.swift in Sources */,
+				2A0F4D5C24572CF200C8B3DD /* PersianDatePickerPresenter.swift in Sources */,
 				2A7E1A3423FB109700A29F9E /* RadioButton.swift in Sources */,
 				2A7E1A3223FB109700A29F9E /* RadioButtonContainerView.swift in Sources */,
 				2A8F22DB2362CE9800AC6937 /* CoreMotionEx.swift in Sources */,
 				2A7E1A0123FB06CE00A29F9E /* Button.swift in Sources */,
 				CE5226FC22FF372D007F5A9D /* Image.swift in Sources */,
+				2A0F4D6024572CF200C8B3DD /* PersianPickerView.swift in Sources */,
 				2A7E19F723FB05B200A29F9E /* SumTextInputFormatterCaretPositionCalculator.swift in Sources */,
 				CE35BC0E22FF08F400DC1434 /* String.swift in Sources */,
 				2AECAF5A23DEE65900B699EA /* Strings.swift in Sources */,
 				2AD8D2F0236185B600407310 /* ColorEx.swift in Sources */,
 				2A7E1A3A23FB109700A29F9E /* RadioCheckboxBaseContainer.swift in Sources */,
+				2A0F4D4F24572CE200C8B3DD /* TapticEngine.swift in Sources */,
 				CEE85BAE233F8A89007526E5 /* PdfReaderViewController.swift in Sources */,
 				2AD8D2F923618E1B00407310 /* GestureViewController.swift in Sources */,
 				CEFDBA88233D417A0077E480 /* AudioPlayerViewController.swift in Sources */,
 				CEAA5245233E4D3000551546 /* Number.swift in Sources */,
+				2A0F4D5F24572CF200C8B3DD /* ShadowView.swift in Sources */,
+				2AD49EEE23FD622700F81EA4 /* Routes.swift in Sources */,
+				2A0F4D4E24572CE200C8B3DD /* RangeSeekSlider.swift in Sources */,
 				CEDF5C002301C242007426D2 /* SwiftLocation.swift in Sources */,
 				2A7E19FC23FB05B200A29F9E /* DefaultTextFormatter.swift in Sources */,
 				2A652D8623F7D487008D9DE0 /* RPCircularProgress.swift in Sources */,
@@ -767,15 +822,16 @@
 				CE35BBFC22FF07DA00DC1434 /* ViewController.swift in Sources */,
 				2A7E19FF23FB05B200A29F9E /* String+Extension.swift in Sources */,
 				2A99924923F56848003387BF /* DownloadManagerViewController.swift in Sources */,
+				2A0F4D5924572CF200C8B3DD /* CustomView.swift in Sources */,
 				2AFAB5AD236055E60053D56C /* View.swift in Sources */,
 				2A73AA54236232FF00B4A88E /* SwiftyJSON.swift in Sources */,
 				2AFAB5B223607D110053D56C /* TextFieldCustom.swift in Sources */,
 				2A7E19FE23FB05B200A29F9E /* TextFormatter.swift in Sources */,
 				2A8F22E22362DA5600AC6937 /* MapKitViewController.swift in Sources */,
-				2A7E1A3D23FB1AF500A29F9E /* ImageView.swift in Sources */,
 				CE01C98323019FD700C87440 /* Alamofire.swift in Sources */,
 				2A7E1A3123FB109700A29F9E /* RadioButtonColor.swift in Sources */,
 				2A7E1A3623FB109700A29F9E /* CheckboxButtonContainerView.swift in Sources */,
+				2A31EEDF23FD18540074E5CA /* FileManager.swift in Sources */,
 				2A99924123F567BB003387BF /* MZDownloadManager.swift in Sources */,
 				2A354FAD2360C1CA00CA14F1 /* Layout.swift in Sources */,
 				CEAA5247233E5FC900551546 /* Subtitle.swift in Sources */,
@@ -788,8 +844,10 @@
 				2AE87C0A237A894A003001DA /* Label.swift in Sources */,
 				2A7E1A3723FB109700A29F9E /* CheckBoxColor.swift in Sources */,
 				2A7E1A3923FB109700A29F9E /* CheckboxLineStyle.swift in Sources */,
+				2A0F4D4D24572CE200C8B3DD /* RangeSeekSliderDelegate.swift in Sources */,
 				2A652D9E23F7FD64008D9DE0 /* ProgressBar.swift in Sources */,
 				2A8F22E42362DEE500AC6937 /* MapKitEx.swift in Sources */,
+				2A0F4D5E24572CF200C8B3DD /* PersianDatePickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

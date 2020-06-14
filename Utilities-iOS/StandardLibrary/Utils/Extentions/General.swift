@@ -35,9 +35,4 @@ extension Array where Element: Equatable {
     }
 }
 
-func mzDownloadManager(delegate: MZDownloadManagerDelegate) -> MZDownloadManager {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    return MZDownloadManager(session: "com.iosDevelopment.MZDownloadManager.BackgroundSession",
-                             delegate: delegate,
-                             completion: appDelegate.backgroundSessionCompletionHandler)
-}
+func delay(second: Double, next: @escaping () -> Void) { DispatchQueue.main.asyncAfter(deadline: .now() + second) { next() } }

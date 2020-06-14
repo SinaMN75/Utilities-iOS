@@ -3,6 +3,14 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
+let keyWindow = UIApplication.shared.connectedScenes
+    .filter({$0.activationState == .foregroundActive})
+    .map({$0 as? UIWindowScene})
+    .compactMap({$0})
+    .first?.windows
+    .filter({$0.isKeyWindow}).first
+
 extension UIView {
     
     func animate(x: Double, y: Double, width: Double, height: Double, duration: Double, completion:@escaping  () -> Void) {
@@ -20,6 +28,10 @@ extension UIView {
         layer.shadowRadius = 12.0
         layer.shadowOpacity = shadowOpacity
     }
+    
+    func invisible() { self.isHidden = true }
+    
+    func visible() { self.isHidden = false }
 }
 
 func imageButton(image: String, action: Selector) -> UIButton {

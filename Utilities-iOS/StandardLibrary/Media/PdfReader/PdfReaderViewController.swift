@@ -4,178 +4,128 @@
 import UIKit
 import PDFKit
 
-class PdfReaderViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, PdfCellDelegate {
+class PdfReaderViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MZDownloadManagerDelegate {
+    func downloadRequestDidUpdateProgress(_ downloadModel: MZDownloadModel, index: Int) {
+        print(downloadModel.fileName ?? "")
+        print(downloadModel.progress)
+    }
+    
+    func downloadRequestDidPopulatedInterruptedTasks(_ downloadModel: [MZDownloadModel]) { }
+    
+    func downloadRequestFinished(_ downloadModel: MZDownloadModel, index: Int) {
+        print("Finished: " + downloadModel.fileName)
+        print("Finished: " + downloadModel.destinationPath)
         
+        let pdf = PdfModel(pdfTitle: downloadModel.fileName, pdfPath: "downloadModel.destinationPath/\(downloadModel.fileName!).pdf")
+        
+        pdfList.append(pdf)
+    }
+    
+    
+    var pdf: PdfModel!
+    
     @IBOutlet weak var pdfView: PDFView!
     @IBOutlet weak var collectionViewPages: UICollectionView!
     @IBOutlet weak var collectionViewPdf: UICollectionView!
-    @IBOutlet weak var collectionViewOutline: UICollectionView!
+    @IBOutlet weak var buttonOpenOutlines: UIButton!
+    @IBOutlet weak var widthCons: NSLayoutConstraint!
     
-    private var pageList = [UIImage]()
-    private var pdfList = pdf()
+    private var pdfList = [PdfModel]()
     private var selectedPdfIndex = 0
+    private var isOutlinesOpen = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionViewPages.delegate = self
-        collectionViewPages.dataSource = self
-        collectionViewPdf.delegate = self
-        collectionViewPdf.dataSource = self
-        pdfView.usePageViewController(true)
+        
+        downloadManager(delegate: self).addDownloadTask("p1", fileURL: "https://www.pdfpdf.com/samples/Sample1.PDF",
+                                                        destinationPath: "\(MZUtility.baseFilePath)/My Downloads", fileId: 1)
+        
+//        get()
+//        collectionViewPdf.delegate = self
+//        collectionViewPdf.dataSource = self
+//        pdfView.usePageViewController(true)
+        
         
     }
     
-    private func showThumbnales(pdfDocument: PDFDocument) {
-        pageList.removeAll()
-        for i in 0...pdfDocument.pageCount - 1 {
-            pageList.append((pdfDocument.page(at: i)?.thumbnail(of: CGSize(width: 100, height: 130), for: .artBox))!)
-        }
-    }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch collectionView {
-        case collectionViewPdf: return pdfList.count
-        case collectionViewPages: return pageList.count
-        default: return 0
-        }
+    private func get() {
+        do {
+            pdfList = try JSONDecoder().decode([PdfModel].self, from: Data(getString(key: "pdf")!.utf8))
+            pdfList.append(pdf)
+        } catch { print(error) }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch collectionView {
-        case collectionViewPdf:
-            let cellPdf = collectionView.dequeueReusableCell(withReuseIdentifier: "cellPdf", for: indexPath) as! PdfListCell
-            cellPdf.setupPdfs(pdf: pdfList[indexPath.row])
-            cellPdf.delegate = self
-            return cellPdf
-        case collectionViewPages:
-            let cellPdfPage = collectionView.dequeueReusableCell(withReuseIdentifier: "cellPdfPage", for: indexPath) as! PdfPageCell
-            cellPdfPage.imageView.image = pageList[indexPath.row]
-            return cellPdfPage
-        default: return UICollectionViewCell()
+    func saveData() {
+        do { set(value: String(data: try JSONEncoder().encode(pdfList), encoding: .utf8)!, key: "pdf") }
+        catch { print(error) }
+    }
+    
+    @IBAction func buttonOpennOutlinesAction(_ sender: Any) {
+        if !isOutlinesOpen {
+            self.widthCons.constant = 250
+            isOutlinesOpen = true
         }
+        else {
+            self.widthCons.constant = 0
+            isOutlinesOpen = false
+        }
+        UIView.animate(withDuration: 0.8) { self.view.layoutIfNeeded() }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { return pdfList.count }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let c = collectionView.dequeueReusableCell(withReuseIdentifier: "cellPdf", for: indexPath) as! PdfListCell
+        c.labelTitle.text = pdfList[indexPath.row].pdfTitle
+        c.close = { self.onCloseTapped(pdf: self.pdfList[indexPath.row]) }
+        return c
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        switch collectionView {
-        case collectionViewPdf: pdfList[indexPath.row].currentPage = (pdfView.currentPage?.pageRef!.pageNumber)! - 1
-        default: break
-        }
+        pdfList[indexPath.row].pdfOpenPage = (pdfView.currentPage?.pageRef!.pageNumber)! - 1
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch collectionView {
-        case collectionViewPdf:
-            pdfView.document = pdfList[indexPath.row].pdf
-            if let page = pdfList[indexPath.row].pdf!.page(at:pdfList[indexPath.row].currentPage!) { pdfView.go(to: page) }
-            selectedPdfIndex = indexPath.row
-            
-//            showThumbnales(pdfDocument: pdfList[indexPath.row].pdf!)
-//            collectionViewPages.reloadData()
-            
-        case collectionViewPages: if let page = pdfView.document?.page(at:indexPath.row) { pdfView.go(to: page) }
-        default: break
-        }
+        guard let url = FilesManager.default.path(pdfList[indexPath.row].pdfPath) else { return }
+        let pdfDocument = PDFDocument(url: url)
+        pdfView.document = pdfDocument
+        if let page = pdfDocument?.page(at: pdfList[indexPath.row].pdfOpenPage) { pdfView.go(to: page) }
+        selectedPdfIndex = indexPath.row
     }
     
-    func onCloseTapped(pdf: PDF) {
-        if pdfList.count == 1 {
-            
-        } else {
+    func onCloseTapped(pdf: PdfModel) {
+        if pdfList.count == 1 { self.dismiss() }
+        else {
             let index = pdfList.remove(object: pdf)
             collectionViewPdf.reloadData()
-            
             if index != -1 && index == selectedPdfIndex {
                 if index == 0 {
-                    pdfView.document = pdfList[index].pdf
-                    if let page = pdfList[index].pdf!.page(at:pdfList[index].currentPage!) { pdfView.go(to: page) }
+                    guard let url = FilesManager.default.path(pdf.pdfPath) else { return }
+                    let pdfDocument = PDFDocument.init(url: url)
+                    pdfView.document = pdfDocument
+                    if let page = pdfDocument?.page(at:pdfList[index].pdfOpenPage!) { pdfView.go(to: page) }
                     selectedPdfIndex = index
                 } else {
-                    pdfView.document = pdfList[index - 1].pdf
-                    if let page = pdfList[index - 1].pdf!.page(at:pdfList[index - 1].currentPage!) { pdfView.go(to: page) }
+                    guard let url = FilesManager.default.path(pdfList[index - 1].pdfPath!) else { return }
+                    let document = PDFDocument.init(url: url)
+                    pdfView.document = document
+                    if let page = document?.page(at:pdfList[index - 1].pdfOpenPage) { pdfView.go(to: page) }
                     selectedPdfIndex = index - 1
                 }
             }
         }
     }
-    
-    func saveData() {
-        do {
-            let jsonData = try JSONEncoder().encode(pdff())
-            let jsonString = String(data: jsonData, encoding: .utf8)!
-            set(value: jsonString, key: "pdf")
-            print(jsonString)
-                        
-            let s = getString(key: "pdf")
-            
-            print(try! JSONDecoder().decode([PdfModel].self, from: Data(s!.utf8)).first?.pdfTitle! as Any)
-            
-        } catch { print(error) }
-    }
-
-
-}
-
-struct PDF: Equatable {
-    var id: String?
-    var title: String?
-    var currentPage: Int?
-    var pdf: PDFDocument?
-    
-    init(id: String, title: String, currentPage: Int, pdfDocument: PDFDocument) {
-        self.id = id
-        self.title = title
-        self.currentPage = currentPage
-        self.pdf = pdfDocument
-    }
-}
-
-func pdf() -> [PDF] {
-    var pdfList = [PDF]()
-    
-    if let url1 = URL(string: "https://www.pdfpdf.com/samples/Sample1.PDF") {
-        pdfList.append(PDF.init(id: "aaa", title: "PDF 1", currentPage: 0, pdfDocument: PDFDocument(url: url1)!))
-    }
-
-    if let url2 = URL(string: "https://www.pdfpdf.com/samples/Sample2.PDF") {
-        pdfList.append(PDF.init(id: "bbb", title: "PDF 2", currentPage: 0, pdfDocument: PDFDocument(url: url2)!))
-    }
-
-    if let url3 = URL(string: "https://www.antennahouse.com/XSLsample/pdf/sample-link_1.pdf") {
-        pdfList.append(PDF.init(id: "ccc", title: "PDF 3", currentPage: 0, pdfDocument: PDFDocument(url: url3)!))
-    }
-    
-    return pdfList
-}
-
-func pdff() -> [PdfModel] {
-    var pdf = [PdfModel]()
-    
-    pdf.append(PdfModel(pdfTitle: "hello", pdfPath: "path...."))
-    pdf.append(PdfModel(pdfTitle: "hi", pdfPath: "directory...."))
-    return pdf
-}
-
-protocol PdfCellDelegate {
-    func onCloseTapped(pdf: PDF)
 }
 
 class PdfListCell: UICollectionViewCell {
-    
-    var pdf: PDF!
-    var delegate: PdfCellDelegate!
+    var close: (()->Void)?
     
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var buttonClose: UIButton!
-    
-    @IBAction func buttonCloseAction(_ sender: Any) { delegate.onCloseTapped(pdf: pdf) }
-    
-    func setupPdfs(pdf: PDF) {
-        self.pdf = pdf
-        labelTitle.text = pdf.title
-    }
+    @IBAction func buttonCloseAction(_ sender: Any) { close?() }
 }
 
-struct PdfModel: Codable {
+struct PdfModel: Codable, Equatable {
     var pdfTitle: String!
     var pdfPath: String!
     var pdfOpenPage: Int!
@@ -185,13 +135,4 @@ struct PdfModel: Codable {
         self.pdfPath = pdfPath
         self.pdfOpenPage = pdfOpenPage
     }
-}
-
-class PdfPageCell : UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView!
-}
-
-class PdfOutlineCell: UICollectionViewCell {
-    @IBOutlet weak var buttonOutlineTitle: UIButton!
-    @IBOutlet weak var buttonOutlineTitleAction: UIButton!
 }

@@ -7,13 +7,13 @@ import Alamofire
 typealias onResponse = ((_ response:DataResponse<Data>)->())
 typealias onFailure = ((_ error:Error,_ response:DataResponse<Data> )->())
 
-private func send(url:String,
-                  method:HTTPMethod = .post,
-                  parameters:Parameters? = nil,
-                  encoding:JSONEncoding = JSONEncoding.default,
-                  header: HTTPHeaders,
-                  onResponse:@escaping onResponse,
-                  onFailure:onFailure?) {
+func send(url:String,
+          method:HTTPMethod = .post,
+          parameters:Parameters? = nil,
+          encoding:JSONEncoding = JSONEncoding.default,
+          header: HTTPHeaders,
+          onResponse:@escaping onResponse,
+          onFailure:onFailure?) {
     
     if (isConnectedToNetwork()) {
         Alamofire.request( url, method: method, parameters: parameters, encoding: encoding, headers: header).responseData{ response in
@@ -79,8 +79,7 @@ func upload(endUrl: String,
     }
 }
 
-func upload(
-    image: UIImage,
+func upload(image: UIImage,
             withName: String,
             fileName: String,
             mimeType: String,

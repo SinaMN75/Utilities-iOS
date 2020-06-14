@@ -7,10 +7,10 @@ class DownloadManagerViewController: UIViewController, MZDownloadManagerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        mzDownloadManager(delegate: self).addDownloadTask("1",
-                                                          fileURL: SAMPLE_10_VIDEO,
-                                                          destinationPath: "\(MZUtility.baseFilePath)/My Downloads", fileId: 1)
+        
+        downloadManager(delegate: self).addDownloadTask("1",
+                                                        fileURL: SAMPLE_10_VIDEO,
+                                                        destinationPath: "\(MZUtility.baseFilePath)/My Downloads", fileId: 1)
     }
     
     func downloadRequestDidUpdateProgress(_ downloadModel: MZDownloadModel, index: Int) { }

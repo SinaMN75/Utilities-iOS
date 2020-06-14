@@ -21,9 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yqx-GB-BPJ" customClass="RPCircularProgress" customModule="Utilities_iOS" customModuleProvider="target">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqx-GB-BPJ" customClass="RPCircularProgress" customModule="Utilities_iOS" customModuleProvider="target">
                     <rect key="frame" x="25" y="25" width="50" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="trackTintColor">
@@ -40,16 +39,14 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duC-En-5Nj">
-                    <rect key="frame" x="25" y="80" width="50" height="12"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duC-En-5Nj">
+                    <rect key="frame" x="25" y="80" width="50" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnZ-FU-seP">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnZ-FU-seP">
                     <rect key="frame" x="35" y="35" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" image="download.png"/>
                     <connections>
@@ -58,6 +55,19 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="duC-En-5Nj" firstAttribute="leading" secondItem="mT8-sc-LiP" secondAttribute="leading" constant="25" id="1va-7q-Xgm"/>
+                <constraint firstItem="yqx-GB-BPJ" firstAttribute="centerY" secondItem="n2q-rb-SUX" secondAttribute="centerY" id="2vc-GQ-9qA"/>
+                <constraint firstItem="yqx-GB-BPJ" firstAttribute="top" secondItem="mT8-sc-LiP" secondAttribute="top" constant="25" id="6cQ-bc-RpR"/>
+                <constraint firstItem="duC-En-5Nj" firstAttribute="centerX" secondItem="HnZ-FU-seP" secondAttribute="centerX" id="Bkn-Wx-Dgm"/>
+                <constraint firstItem="yqx-GB-BPJ" firstAttribute="centerY" secondItem="HnZ-FU-seP" secondAttribute="centerY" id="FpY-cg-lyi"/>
+                <constraint firstItem="yqx-GB-BPJ" firstAttribute="centerX" secondItem="n2q-rb-SUX" secondAttribute="centerX" id="TVA-bt-HPk"/>
+                <constraint firstItem="HnZ-FU-seP" firstAttribute="leading" secondItem="mT8-sc-LiP" secondAttribute="leading" constant="35" id="Y3z-2t-VHO"/>
+                <constraint firstItem="yqx-GB-BPJ" firstAttribute="centerX" secondItem="HnZ-FU-seP" secondAttribute="centerX" id="hB8-PX-feR"/>
+                <constraint firstItem="HnZ-FU-seP" firstAttribute="top" secondItem="mT8-sc-LiP" secondAttribute="top" constant="35" id="trW-I2-4kq"/>
+                <constraint firstItem="duC-En-5Nj" firstAttribute="top" secondItem="yqx-GB-BPJ" secondAttribute="bottom" constant="5" id="waq-Xc-w7w"/>
+                <constraint firstItem="yqx-GB-BPJ" firstAttribute="leading" secondItem="mT8-sc-LiP" secondAttribute="leading" constant="25" id="x17-N5-vak"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="mT8-sc-LiP"/>
             <point key="canvasLocation" x="-294.39999999999998" y="205.09745127436284"/>

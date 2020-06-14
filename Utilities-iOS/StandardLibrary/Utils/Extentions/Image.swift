@@ -6,10 +6,13 @@ import Photos
 import ImageIO
 
 extension UIImageView {
-    
     func loadGif(name: String) {DispatchQueue.global().async { DispatchQueue.main.async { self.image = UIImage.gif(name: name) } } }
     
     func loadGif(asset: String) { DispatchQueue.global().async { DispatchQueue.main.async { self.image = UIImage.gif(asset: asset) } } }
+    
+    func image(name: String) { self.image = UIImage(named: name) }
+    
+    func roundCorners(radius: CGFloat = 10) { self.layer.cornerRadius = radius }
 }
 
 func makeImage(_ image: String) -> UIImage { return UIImage(named: image)?.withRenderingMode(.alwaysOriginal) ?? UIImage() }

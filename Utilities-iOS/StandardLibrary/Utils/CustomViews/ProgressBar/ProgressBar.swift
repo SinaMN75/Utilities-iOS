@@ -13,15 +13,8 @@ class ProgressBar : UIView {
     @IBOutlet weak var buttonStop: UIButton!
     
     @IBAction func buttonStopAction(_ sender: Any) {
-        if isDownloading {
-            buttonStop.setImage(#imageLiteral(resourceName: "download.png"), for: .normal)
-            stopAnimating()
-        } else {
-            buttonStop.setImage(#imageLiteral(resourceName: "stop.png"), for: .normal)
-            progressView.enableIndeterminate(false, completion: nil)
-            startAnimating()
-        }
-        
+        if isDownloading { hideProgress() }
+        else { showProgress() }
         downloadOrStop?()
     }
     
@@ -32,23 +25,8 @@ class ProgressBar : UIView {
         _ = loadViewFromNib()
     }
     
-    func startAnimating() {
-        hideProgress()
-        isDownloading = true
-        progressView.enableIndeterminate()
-        buttonStop.setImage(#imageLiteral(resourceName: "stop.png"), for: .normal)
-    }
-    
-    func stopAnimating() {
-        isDownloading = false
-        progressView.enableIndeterminate(false, completion: nil)
-        showProgress()
-        buttonStop.setImage(#imageLiteral(resourceName: "download.png"), for: .normal)
-    }
-    
     func updateProgress(progress: Float) {
-        hideProgress()
-        isDownloading = true
+        showProgress()
         progressView.enableIndeterminate(false, completion: nil)
         labelPercent.text = "\(Int(progress * 100))%"
         progressView.updateProgress(CGFloat(progress), animated: true, initialDelay: 0.1, duration: 1, completion: nil)
@@ -56,22 +34,26 @@ class ProgressBar : UIView {
     }
     
     func loadViewFromNib() -> UIView {
-        let bundle = Bundle.init(for: type(of: self))
-        let nib = UINib(nibName: "ProgressBar", bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        let view = UINib(nibName: "ProgressBar", bundle: Bundle.init(for: type(of: self))).instantiate(withOwner: self, options: nil)[0] as! UIView
         view.frame = bounds
         view.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
         addSubview(view)
         return view
     }
     
-    private func hideProgress() {
-        progressView.isHidden = false
-        labelPercent.isHidden = false
-    }
-    
-    private func showProgress() {
+    func hideProgress() {
+        isDownloading = false
         progressView.isHidden = true
         labelPercent.isHidden = true
+        buttonStop.setImage(#imageLiteral(resourceName: "download.png"), for: .normal)
+        progressView.enableIndeterminate(false, completion: nil)
+    }
+    
+    func showProgress() {
+        isDownloading = true
+        progressView.isHidden = false
+        labelPercent.isHidden = false
+        buttonStop.setImage(#imageLiteral(resourceName: "stop.png"), for: .normal)
+        progressView.enableIndeterminate()
     }
 }

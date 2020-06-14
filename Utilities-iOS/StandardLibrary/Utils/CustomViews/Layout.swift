@@ -77,3 +77,14 @@ class ViewCardBorder : UIView {
         layer.cornerRadius = corner
     }
 }
+
+@IBDesignable
+class ViewCircle : UIView {
+    override func prepareForInterfaceBuilder() { update() }
+    override func awakeFromNib() { update() }
+    private func update() {
+        layer.cornerRadius = frame.width
+        clipsToBounds = true
+        layer.masksToBounds = true
+    }
+}
