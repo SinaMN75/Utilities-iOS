@@ -11,6 +11,22 @@ func alert(title: String = "", message: String = "", buttonTitle: String = "با
     topVC().present(alert, animated: true, completion: nil)
 }
 
+func alertTextField(title: String = "", message: String = "", placeHolder: String = "", text: String = "", action: @escaping (String) -> Void) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    
+    alert.addTextField { (textField) in
+        textField.placeholder = placeHolder
+        textField.text = text
+    }
+    
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+        let textField = alert?.textFields![0]
+        action(textField?.text ?? "")
+    }))
+    
+    topVC().present(alert, animated: true, completion: nil)
+}
+
 func alertYesNo(title: String = "",
                 message: String = "",
                 yesTitle: String? = nil,

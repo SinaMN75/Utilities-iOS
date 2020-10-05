@@ -13,6 +13,12 @@ extension UIImageView {
     func image(name: String) { self.image = UIImage(named: name) }
     
     func roundCorners(radius: CGFloat = 10) { self.layer.cornerRadius = radius }
+    
+    func setImage(name: String) { self.image = UIImage(named: name) }
+}
+
+extension UIButton {
+    func setImage(name: String) { self.setImage(UIImage(named: name), for: .normal) }
 }
 
 func makeImage(_ image: String) -> UIImage { return UIImage(named: image)?.withRenderingMode(.alwaysOriginal) ?? UIImage() }

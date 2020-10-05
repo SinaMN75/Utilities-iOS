@@ -7,16 +7,39 @@ import UIKit
 class ButtonRoundedSolid : UIButton {
     
     @IBInspectable var cornerRadius: CGFloat = 20 { didSet { update() } }
-    @IBInspectable var textColor: UIColor = UIColor.init(hex: COLOR_WHITE) { didSet { update() } }
-    @IBInspectable var backgrounndColor: UIColor = UIColor.init(hex: COLOR_PRIMARY) { didSet { update() } }
-
+    @IBInspectable var textColor: UIColor = UC_WHITE { didSet { update() } }
+    @IBInspectable var backgroundcolor: UIColor = UC_PRIMARY { didSet { update() } }
+    @IBInspectable var borderwidth: CGFloat = 1 { didSet { update() } }
+    @IBInspectable var bordercolor: UIColor = UC_PRIMARY { didSet { update() } }
+    
     override func prepareForInterfaceBuilder() { update() }
     override func awakeFromNib() { update() }
     private func update() {
         self.layer.cornerRadius = cornerRadius
         self.titleLabel?.textAlignment = .center
-        self.titleLabel?.textColor = textColor
-        self.layer.backgroundColor = backgroundColor?.cgColor
-        self.frame = CGRect(x: 0, y: 0, width: 150, height: 70)
+        self.setTitleColor(textColor, for: .normal)
+        self.layer.backgroundColor = backgroundcolor.cgColor
+        self.layer.borderWidth = borderwidth
+        self.layer.borderColor = bordercolor.cgColor
     }
 }
+
+@IBDesignable
+class ButtonText : UIButton {
+    
+    @IBInspectable var textColor: UIColor = UC_WHITE { didSet { update() } }
+
+    override func prepareForInterfaceBuilder() { update() }
+    override func awakeFromNib() { update() }
+    private func update() {
+        self.setTitleColor(textColor, for: .normal)
+        
+        let yourAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 14),
+                                                             .foregroundColor: UIColor.blue,
+                                                             .underlineStyle: NSUnderlineStyle.single.rawValue]
+        
+        let attributeString = NSMutableAttributedString(string: "", attributes: yourAttributes)
+        self.setAttributedTitle(attributeString, for: .normal)
+    }
+}
+

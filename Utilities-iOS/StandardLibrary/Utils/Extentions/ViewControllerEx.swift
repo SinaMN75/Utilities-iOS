@@ -119,11 +119,25 @@ extension UIViewController {
         return UIStoryboard(name: storyBoard, bundle: nil).instantiateViewController(withIdentifier: viewControllerID)
     }
 
-    func presentVC(storyboard: String, viewControllerId: String) {
-        self.present(createVC(storyBoard: storyboard, viewControllerID: viewControllerId), animated: true, completion: nil)
+    func presentVC(sb: String,
+                   vc: String,
+                   nc: UINavigationController? = nil,
+                   style: UIModalPresentationStyle? = nil,
+                   next: ((UIViewController) -> Void)? = nil) {
+        let vc = createVC(storyBoard: sb, viewControllerID: vc)
+        if nc != nil { nc!.pushViewController(vc, animated: true) }
+        else {
+            if style != nil { vc.modalPresentationStyle = style! }
+            present(vc, animated: true, completion: nil)
+        }
+        if next != nil { next!(vc) }
     }
     
     func dismiss(animated: Bool = true) { self.dismiss(animated: animated, completion: nil) }
+    
+    func openLink(link: String) { if let url = URL(string: link) { UIApplication.shared.open(url) } }
+    
+    func hideKeyboard() { view.endEditing(true) }
 }
 
 func topVC() -> UIViewController {

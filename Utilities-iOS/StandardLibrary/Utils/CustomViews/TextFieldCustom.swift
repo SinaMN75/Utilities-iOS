@@ -3,6 +3,21 @@
 
 import UIKit
 
+extension UITextField {
+    fileprivate func setupFont(size: CGFloat, textColor: UIColor) {
+        font = UIFont(name: "IRANSansMobileFaNum", size: size)
+    }
+    
+    func paddingLeft(_ amount:CGFloat){
+        self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.leftViewMode = .always
+    }
+    func paddingRight(_ amount:CGFloat) {
+        self.rightView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.rightViewMode = .always
+    }
+}
+
 @IBDesignable
 class TextFieldTransparent: UITextField {
     override func awakeFromNib() { setup() }

@@ -21,6 +21,17 @@ extension UIView {
         UIView.animate(withDuration: duration, animations: { self.alpha = CGFloat(alpha) }) { finished in completion() }
     }
     
+    func roundCorners(_ corners: CACornerMask,
+                      radius: CGFloat,
+                      borderColor: UIColor = .white,
+                      borderWidth: CGFloat = 0) {
+        self.layer.maskedCorners = corners
+        self.layer.cornerRadius = radius
+        self.layer.borderWidth = borderWidth
+        self.layer.borderColor = borderColor.cgColor
+        
+    }
+    
     func setupCardView(corner: CGFloat = 20, shadowOffset: CGSize = CGSize(width: 0.0, height: 0.0), shadowOpacity: Float = 0.7) {
         layer.cornerRadius = corner
         layer.shadowColor = UIColor.gray.cgColor
